@@ -4,6 +4,13 @@ FOOTER STYLES
 
 .footer {
   clear: both;
+  background-color: black;
+  color: $white;
+}
+
+.inner-footer{
+  @include container($wrapper-width);
+  padding: 75px 0;
 }
 
   /*

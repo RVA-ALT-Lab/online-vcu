@@ -14,13 +14,20 @@ and more scalable.
 .nav {
   border-bottom: 0;
   margin: 0;
+  padding-left: 2em;
 
   li {
+    // display: inline-block;
+    float: left;
 
     a {
       display: block;
       text-decoration: none;
-      padding: 0.75em;
+      padding: 0 .75em;
+      height: 100%;
+      color: black;
+
+      transition: all 0.3s ease;
 
       /*
       remember this is for mobile ONLY, so there's no need
@@ -29,7 +36,8 @@ and more scalable.
       keep this file as small as possible!
       */
       &:hover, &:focus {
-
+        background-color: $yellow;
+        color: $white;
       }
     }
 
@@ -77,5 +85,73 @@ and more scalable.
     a {}
 
   }  /* end current highlighters */
+
+} /* end .nav */
+
+
+
+
+
+.home-nav {
+  border-bottom: 0;
+  margin: 0;
+  padding-left: 0em;
+
+  li {
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 0 .25em;
+      height: 100%;
+      color: $white;
+      transition: all 0.3s ease;
+      font-size: 36px;
+
+      @include breakpoint(400px){
+        font-size: 48px;
+      } 
+
+      @include breakpoint(480px){
+        font-size: 64px;
+      } 
+
+      @include breakpoint(640px){
+        font-size: 96px;
+      }   
+
+      @include breakpoint(740px){
+        font-size: 108px;
+      }  
+
+      @include breakpoint(860px){
+        font-size: 120px;
+      }  
+
+      @include breakpoint(900px){
+        font-size: 132px;
+      }      
+
+      @include breakpoint(940px){
+        font-size: 144px;
+      }
+      
+      font-weight: bold;
+      border-left: .5em solid transparent;
+
+      /*
+      remember this is for mobile ONLY, so there's no need
+      to even declare hover styles here, you can do it in
+      the style.scss file where it's relevant. We want to
+      keep this file as small as possible!
+      */
+      &:hover, &:focus {
+        color: $yellow;
+        background: $white;
+        border-left: .5em solid $yellow;
+      }
+    }
+
+  }
 
 } /* end .nav */

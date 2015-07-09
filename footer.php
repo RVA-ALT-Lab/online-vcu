@@ -18,6 +18,12 @@
 						)); ?>
 					</nav>
 
+					<p>Online@VCU 1000<br/>
+					Floyd Ave, Suite 4102 | Richmond, Virginia 23284 online@vcu.edu</p>
+					<p>Division of the Vice Provost for Learning Innovation and Student Success <br/>
+					Office of the Provost | Virginia Commonwealth University</p>
+
+
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
           <p class="last-modified">Last modified: <?php the_modified_time('F j, Y'); ?></p>
 				</div>

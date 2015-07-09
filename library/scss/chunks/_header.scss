@@ -3,12 +3,30 @@ HEADER STYLES
 *********************/
 
 .header {
+	background: $white;
+	text-transform: uppercase;
+	background-image: url('https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg');
+    background-size: cover;
+    background-position: bottom center;
+	// height: 184px;
+
+
+    .inner-header{
+    	background: $white;
+    	line-height: 59px;
+	    height: 59px;
+    }
 }
 
   #logo {
-    margin: 0.75em 0;
+  	// display: inline-block;
+  	float: left;
+    margin: 0 2em 0 18px;
+
 
     a {
-      color: $black;
+        color: $black;
+        font-size: 24px;
+        line-height: inherit;
     }
   }

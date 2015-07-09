@@ -1109,7 +1109,8 @@ HEADER STYLES
   .header .inner-header {
     background: #fff;
     line-height: 59px;
-    height: 59px; }
+    height: 59px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
 
 #logo {
   float: left;
@@ -1117,7 +1118,12 @@ HEADER STYLES
   #logo a {
     color: #323944;
     font-size: 24px;
-    line-height: inherit; }
+    line-height: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    top: -3px; }
+    #logo a:hover, #logo a:focus {
+      color: #FEBE10; }
 
 /*********************
 NAVIGATION STYLES
@@ -1210,23 +1216,24 @@ and more scalable.
     .home-nav li a:hover, .home-nav li a:focus {
       color: #FEBE10;
       background: #fff;
-      border-left: 0.5em solid #FEBE10; }
+      border-left: 0.49em solid #FEBE10; }
 
 /* end .nav */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 .content {
+  background-color: #fff; }
+
+.hentry {
+  overflow: hidden;
   max-width: 940px;
   margin-left: auto;
   margin-right: auto; }
-  .content:after {
+  .hentry:after {
     content: " ";
     display: block;
     clear: both; }
-
-.hentry {
-  overflow: hidden; }
   .hentry footer p {
     margin: 0; }
 
@@ -1274,6 +1281,7 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   overflow: hidden;
+  background-color: #fff;
   /*
       image alignment on a screen this size may be
       a bit difficult. It's set to start aligning
@@ -1438,7 +1446,7 @@ FOOTER STYLES
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-  padding: 75px 0; }
+  padding: 75px 0 75px 1.5em; }
   .inner-footer:after {
     content: " ";
     display: block;

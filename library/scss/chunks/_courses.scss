@@ -1,0 +1,39 @@
+.course-table-headers,
+.course-table-row{
+	@include container($wrapper-width);
+	padding: .5em;
+
+	&:nth-child(odd){
+		background-color: $light-gray;
+	}
+
+	.course{
+		@include span(first 4 of 12);
+
+		.course-title{
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+	}
+
+	.details{
+		@include span( 6 of 12 );
+
+		.full-description{
+			display: none;
+			margin: 1em 0;
+
+			button{
+				margin: 1em 0;
+				border: none;
+				background-color: $yellow;
+				padding: 1em;
+				color: $white;
+			}
+		}
+	}
+
+	.mode{
+		@include span( last 2 of 12 );
+	}
+}

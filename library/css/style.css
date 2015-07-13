@@ -1101,20 +1101,26 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background: #fff;
   text-transform: uppercase;
-  background-image: url("https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg");
-  background-size: cover;
-  background-position: bottom center; }
+  position: relative;
+  overflow: hidden; }
   .header .inner-header {
     background: #fff;
     line-height: 59px;
     height: 59px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
+    .header .inner-header .inner-header-wrap {
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto; }
+      .header .inner-header .inner-header-wrap:after {
+        content: " ";
+        display: block;
+        clear: both; }
 
 #logo {
   float: left;
-  margin: 0 2em 0 18px; }
+  margin: 0 2em 0 0; }
   #logo a {
     color: #323944;
     font-size: 24px;
@@ -1124,6 +1130,23 @@ HEADER STYLES
     top: -3px; }
     #logo a:hover, #logo a:focus {
       color: #FEBE10; }
+
+.home .header {
+  background: rgba(0, 0, 0, 0.5); }
+
+video#bgvid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg") no-repeat;
+  background-size: cover; }
 
 /*********************
 NAVIGATION STYLES
@@ -1175,17 +1198,25 @@ and more scalable.
 .home-nav {
   border-bottom: 0;
   margin: 0;
-  padding-left: 0em; }
+  padding-left: 0em;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto; }
+  .home-nav:after {
+    content: " ";
+    display: block;
+    clear: both; }
   .home-nav li a {
     display: block;
     text-decoration: none;
-    padding: 0 0.25em;
     height: 100%;
     color: #fff;
     transition: all 0.3s ease;
     font-size: 36px;
+    text-align: left;
+    position: relative;
     font-weight: bold;
-    border-left: .5em solid transparent;
+    border-left: 0em solid transparent;
     /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1212,11 +1243,13 @@ and more scalable.
         font-size: 132px; } }
     @media (min-width: 940px) {
       .home-nav li a {
-        font-size: 144px; } }
+        font-size: 144px;
+        left: -12px; } }
     .home-nav li a:hover, .home-nav li a:focus {
       color: #FEBE10;
       background: #fff;
-      border-left: 0.49em solid #FEBE10; }
+      border-left: 0.2em solid #FEBE10;
+      padding-left: .2em; }
 
 /* end .nav */
 /*********************
@@ -1248,8 +1281,7 @@ POSTS & CONTENT STYLES
   margin-left: auto;
   margin-right: auto;
   margin-top: 36px;
-  margin-bottom: 36px;
-  padding-left: 1.5em; }
+  margin-bottom: 36px; }
   .page-title-wrap:after {
     content: " ";
     display: block;
@@ -1367,6 +1399,51 @@ POSTS & CONTENT STYLES
 .tags {
   margin: 0; }
 
+.course-table-headers,
+.course-table-row {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em; }
+  .course-table-headers:after,
+  .course-table-row:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .course-table-headers:nth-child(odd),
+  .course-table-row:nth-child(odd) {
+    background-color: #f8f9fa; }
+  .course-table-headers .course,
+  .course-table-row .course {
+    width: 31.0344827586%;
+    float: left;
+    margin-right: 3.4482758621%; }
+    .course-table-headers .course .course-title,
+    .course-table-row .course .course-title {
+      font-weight: bold;
+      text-transform: capitalize; }
+  .course-table-headers .details,
+  .course-table-row .details {
+    width: 48.275862069%;
+    float: left;
+    margin-right: 3.4482758621%; }
+    .course-table-headers .details .full-description,
+    .course-table-row .details .full-description {
+      display: none;
+      margin: 1em 0; }
+      .course-table-headers .details .full-description button,
+      .course-table-row .details .full-description button {
+        margin: 1em 0;
+        border: none;
+        background-color: #FEBE10;
+        padding: 1em;
+        color: #fff; }
+  .course-table-headers .mode,
+  .course-table-row .mode {
+    width: 13.7931034483%;
+    float: right;
+    margin-right: 0; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -1446,7 +1523,7 @@ FOOTER STYLES
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-  padding: 75px 0 75px 1.5em; }
+  padding: 75px 0 75px 0; }
   .inner-footer:after {
     content: " ";
     display: block;

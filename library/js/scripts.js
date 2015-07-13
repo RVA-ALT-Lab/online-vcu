@@ -110,11 +110,11 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
+// $('.course-table-row').on('click', function(){
+//   // $(this).find('.full-description').slidetoggle();
+
+//   console.log('butter');
+// });
 
 
 }); /* end of as page load scripts */

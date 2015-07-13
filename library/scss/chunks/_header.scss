@@ -3,38 +3,65 @@ HEADER STYLES
 *********************/
 
 .header {
-	background: $white;
+	// background: $white;
 	text-transform: uppercase;
-	background-image: url('https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg');
-    background-size: cover;
-    background-position: bottom center;
+	// background-image: url('https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg');
+ //  background-size: cover;
+ //  background-position: bottom center;
 	// height: 184px;
-
+    
+    position: relative;
+    overflow: hidden;
 
     .inner-header{
     	background: $white;
     	line-height: 59px;
 	    height: 59px;
       box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+
+      .inner-header-wrap{
+        @include container($wrapper-width);
+      }
     }
 }
 
-  #logo {
-  	// display: inline-block;
-  	float: left;
-    margin: 0 2em 0 18px;
+#logo {
+	// display: inline-block;
+	float: left;
+  margin: 0 2em 0 0;
 
 
-    a {
-        color: $black;
-        font-size: 24px;
-        line-height: inherit;
-        transition: all .3s ease;
-        position: relative;
-        top: -3px;
+  a {
+      color: $black;
+      font-size: 24px;
+      line-height: inherit;
+      transition: all .3s ease;
+      position: relative;
+      top: -3px;
 
-        &:hover, &:focus {
-          color: $yellow;
-        }
-    }
+      &:hover, &:focus {
+        color: $yellow;
+      }
   }
+}
+
+.home .header { 
+  
+  background: rgba(0,0,0,.5);
+
+}
+
+video#bgvid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg') no-repeat;
+  background-size: cover;
+}

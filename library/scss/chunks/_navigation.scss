@@ -97,16 +97,20 @@ and more scalable.
   margin: 0;
   padding-left: 0em;
 
+  @include container($wrapper-width);
+
   li {
 
     a {
       display: block;
       text-decoration: none;
-      padding: 0 .25em;
+      // padding: 0 .25em;
       height: 100%;
       color: $white;
       transition: all 0.3s ease;
       font-size: 36px;
+      text-align: left;
+      position: relative;
 
       @include breakpoint(400px){
         font-size: 48px;
@@ -134,10 +138,11 @@ and more scalable.
 
       @include breakpoint(940px){
         font-size: 144px;
+        left: -12px;
       }
       
       font-weight: bold;
-      border-left: .5em solid transparent;
+      border-left: 0em solid transparent;
 
       /*
       remember this is for mobile ONLY, so there's no need
@@ -148,7 +153,8 @@ and more scalable.
       &:hover, &:focus {
         color: $yellow;
         background: $white;
-        border-left: .49em solid $yellow;
+        border-left: .2em solid $yellow;
+        padding-left: .2em;
       }
     }
 

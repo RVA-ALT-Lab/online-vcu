@@ -1061,6 +1061,23 @@ a, a:visited {
     */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+button a, button a:visited {
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */ }
+  button a:hover, button a:focus, button a:visited:hover, button a:visited:focus {
+    color: #fff; }
+  button a:link, button a:visited:link {
+    /*
+      this highlights links on iPhones/iPads.
+      so it basically works like the :hover selector
+      for mobile devices.
+      */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -1429,20 +1446,68 @@ POSTS & CONTENT STYLES
     margin-right: 3.4482758621%; }
     .course-table-headers .details .full-description,
     .course-table-row .details .full-description {
-      display: none;
-      margin: 1em 0; }
-      .course-table-headers .details .full-description button,
-      .course-table-row .details .full-description button {
-        margin: 1em 0;
-        border: none;
-        background-color: #FEBE10;
-        padding: 1em;
-        color: #fff; }
+      margin: 1em 0;
+      height: auto; }
+      .course-table-headers .details .full-description.ng-hide-add.ng-hide-add-active,
+      .course-table-headers .details .full-description.ng-hide-remove.ng-hide-remove-active,
+      .course-table-row .details .full-description.ng-hide-add.ng-hide-add-active,
+      .course-table-row .details .full-description.ng-hide-remove.ng-hide-remove-active {
+        -webkit-transition: all linear 0.3s;
+        transition: all linear 0.3s; }
+      .course-table-headers .details .full-description.ng-hide,
+      .course-table-row .details .full-description.ng-hide {
+        opacity: 0; }
   .course-table-headers .mode,
   .course-table-row .mode {
     width: 13.7931034483%;
     float: right;
     margin-right: 0; }
+
+.controls {
+  margin: 2em 0;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto; }
+  .controls button {
+    background-color: #eaedf2;
+    color: #323944;
+    transition: all 0.3s ease;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    margin: 0 1em 0 0; }
+    .controls button:hover {
+      background-color: #f8f9fa; }
+  .controls:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .controls .global {
+    width: 48.275862069%;
+    float: left;
+    margin-right: 3.4482758621%; }
+  .controls .filters {
+    width: 48.275862069%;
+    float: right;
+    margin-right: 0; }
+    .controls .filters select {
+      width: 46.4285714286%;
+      float: left; }
+      .controls .filters select:nth-child(2n + 1) {
+        margin-left: 0;
+        margin-right: -100%;
+        clear: both;
+        margin-left: 0; }
+      .controls .filters select:nth-child(2n + 2) {
+        margin-left: 53.5714285714%;
+        margin-right: -100%;
+        clear: none; }
+
+button {
+  margin: 1em 0;
+  border: none;
+  background-color: #FEBE10;
+  padding: 1em; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1463,10 +1528,11 @@ PAGE NAVI STYLES
   .pagination li {
     padding: 0;
     margin: 0;
-    float: left;
-    display: inline;
+    display: inline-block;
     overflow: hidden;
     border-right: 1px solid #eaedf2; }
+    .pagination li:last-child {
+      border-right: none; }
   .pagination a, .pagination span {
     margin: 0;
     text-decoration: none;
@@ -1477,9 +1543,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #2980b9; }
+    color: #323944; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #2980b9;
+      background-color: #FEBE10;
       color: #fff; }
   .pagination .current {
     cursor: default;

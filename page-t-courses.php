@@ -44,6 +44,64 @@
 	<div ng-repeat="data in data">
 			
 		<div class="controls">
+
+			<div class="global">
+				<input type="search"class="search" ng-model='search.$' placeholder='search'>
+				
+				<button ng-click="
+						search.$='';
+						filterMode=''; 
+						filterCollege='';
+						filterDept='';
+						filterSubject='';">Reset All</button>
+
+				<ng-pluralize 
+					count="(
+						data |
+						filter:search | 
+						filter:filterCollege.college |
+						filter:filterMode.mode |
+						filter:filterDept.dept |
+						filter:filterSubject.subject ).length"
+					when="{
+						'0': '0 courses match your criteria.',
+				        'one': '1 course matches your criteria.',
+				        'other': '{} courses match your criteria.',
+					}"></ng-pluralize>
+			</div>
+		
+
+
+			<div class="filters">
+				<select ng-model="filterMode" 
+						ng-options="
+						data.mode for data in data | 
+						unique:'mode' ">
+
+				    <option value=""> All Modes</option>
+				</select>
+
+				<select ng-model="filterCollege" 
+						ng-options="
+						data.college for data in data | 
+						unique:'college'">
+				    <option value="">All Colleges</option>
+				</select>
+
+				<select ng-model="filterDept" 
+						ng-options="
+						data.dept for data in data | 
+						unique:'dept'">
+				    <option value=""> All Departments</option>
+				</select>
+
+				<select ng-model="filterSubject" 
+						ng-options="data.subject for data in data | unique:'subject'">
+				    <option value=""> All Subjects</option>
+				</select>				
+			</div>
+
+
 		</div>
 		
 		<div class="course-table-headers">
@@ -52,34 +110,49 @@
 			<div class="mode header"><strong>Mode</strong></div>
 		</div>
 
-		<div class="course-table-row" ng-repeat="data in data" >
+		<div class="course-table-row" 
+			ng-click="showme = !showme"
+			
+			dir-paginate='
+					data in data | 
+					orderBy: filter : false |
+					filter:search | 
+					filter:filterCollege.college |
+					filter:filterMode.mode |
+					filter:filterDept.dept |
+					filter:filterSubject.subject |
+					itemsPerPage: 10 
+				'
+			>
+
+			
+
 			<div class="course">
-				<span class="course-title">{{data.title}}</span><br/>
-				{{data.instructor}}<br/>
-				{{data.term}} from <i>May 18 to Jun 21</i>
-				
+				<span class="course-title {{filter}}">{{data.title}}</span><br/>
+				<span class="course-instructor {{filter}}">{{data.instructor}}</span><br/>
+				<span class="course-term {{filter}}">{{data.term}}</span> from <i>May 18 to Jun 21</i>			
 			</div>		
 
 			<div class="details">
-				{{data.college}}<br/>
-				{{data.dept}}<br/>
-				CRN: {{data.crn}}<br/>
-				Course: {{data.subject}} {{data.course_number}}-{{data.section}}
+				<span class="course-college {{filter}}">{{data.college}}</span><br/>
+				<span class="course-dept {{filter}}">{{data.dept}}</span><br/>
+				CRN: <span class="course-crn {{filter}}">{{data.crn}}</span><br/>
+				Course: <span class="course-subject {{filter}}">{{data.subject}}</span> <span class="course-number {{filter}}">{{data.course_number}}</span>-<span class="course-section {{filter}}">{{data.section}}</span>
 
-				<div class="full-description">
+				<div class="full-description" ng-show="showme">
 					Semester course; 3 lecture hours. 3 credits. Introduces students to the interdisciplinary processes whereby those working in the field develop their arguments and interpretations concerning the black experience. Students will develop increased skills in library research and an awareness of the importance of such methodologies as archaeology, oral history, case studies, participant observations, experiments and surveys. Students will be introduced to the need for critical analysis, the role of biases and frames of references and the reason why scholars working in the field often reach different conclusions with reference to issues of fact, interpretation and significance.
 
-					<button>HOW TO REGISTER</button>
-
+					<button><a href="http://google.com">HOW TO REGISTER</a></button>
 				</div>
 			</div>	
 
 			<div class="mode">
-				{{data.mode}}
+				<span class="course-mode {{filter}}">{{data.mode}}</span>
 			</div>
 		</div>
 
-
+		
+		<dir-pagination-controls boundary-links='true' on-page-change='pageChangeHandler(newPageNumber)' template-url='<?php echo get_template_directory_uri(); ?>/library/templates/dirPagination.tpl.html'></dir-pagination-controls>
 
 
 

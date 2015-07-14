@@ -45,61 +45,59 @@
 			
 		<div class="controls">
 
-			<div class="global">
-				<input type="search"class="search" ng-model='search.$' placeholder='search'>
-				
-				<button ng-click="
-						search.$='';
-						filterMode=''; 
-						filterCollege='';
-						filterDept='';
-						filterSubject='';">Reset All</button>
-
-				<ng-pluralize 
-					count="(
-						data |
-						filter:search | 
-						filter:filterCollege.college |
-						filter:filterMode.mode |
-						filter:filterDept.dept |
-						filter:filterSubject.subject ).length"
-					when="{
-						'0': '0 courses match your criteria.',
-				        'one': '1 course matches your criteria.',
-				        'other': '{} courses match your criteria.',
-					}"></ng-pluralize>
-			</div>
-		
-
-
 			<div class="filters">
-				<select ng-model="filterMode" 
-						ng-options="
-						data.mode for data in data | 
-						unique:'mode' ">
-
-				    <option value=""> All Modes</option>
-				</select>
-
-				<select ng-model="filterCollege" 
+				<select class="filter-college" ng-model="filterCollege" 
 						ng-options="
 						data.college for data in data | 
+						orderBy: 'college' |
+						filter:filterDept.dept |
 						unique:'college'">
 				    <option value="">All Colleges</option>
 				</select>
 
-				<select ng-model="filterDept" 
+				<select class="filter-dept" ng-model="filterDept" 
 						ng-options="
 						data.dept for data in data | 
+						orderBy: 'dept' |
+						filter:filterCollege.college |
 						unique:'dept'">
 				    <option value=""> All Departments</option>
 				</select>
 
-				<select ng-model="filterSubject" 
-						ng-options="data.subject for data in data | unique:'subject'">
-				    <option value=""> All Subjects</option>
-				</select>				
+				<select class="filter-mode" ng-model="filterMode" 
+						ng-options="
+						data.mode for data in data | 
+						unique:'mode' ">
+				    <option value=""> All Modes</option>
+				</select>
+			
 			</div>
+
+
+			<div class="global">
+				<input class="search" type="search" ng-model='search.$' placeholder='search'>
+				
+				<button class="reset" ng-click="
+						search.$='';
+						filterMode=''; 
+						filterCollege='';
+						filterDept='';">Reset All</button>
+			</div>
+
+
+
+			<ng-pluralize class="feedback"
+			count="(
+				data |
+				filter:search | 
+				filter:filterCollege.college |
+				filter:filterMode.mode |
+				filter:filterDept.dept ).length"
+			when="{
+				'0': '0 courses match your criteria.',
+			    'one': '1 course matches your criteria.',
+			    'other': '{} courses match your criteria.',
+			}"></ng-pluralize>
 
 
 		</div>
@@ -120,7 +118,6 @@
 					filter:filterCollege.college |
 					filter:filterMode.mode |
 					filter:filterDept.dept |
-					filter:filterSubject.subject |
 					itemsPerPage: 10 
 				'
 			>

@@ -104,9 +104,9 @@
 						));
 					} ?>
 
-				<video muted autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
-					<source src="<?php echo get_template_directory_uri(); ?>/library/videos/montage4mark.mp4" type="video/mp4">
-				</video>
+<video autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
+	<source src="<?php echo get_template_directory_uri(); ?>/library/videos/montage4mark.webm" type="video/webm">
+</video>
 
 
 

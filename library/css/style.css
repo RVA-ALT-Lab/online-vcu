@@ -1416,6 +1416,43 @@ POSTS & CONTENT STYLES
 .tags {
   margin: 0; }
 
+.row {
+  margin: 2em 0; }
+  .row:first-child {
+    margin-top: 4em; }
+  .row:last-child {
+    margin-bottom: 6em; }
+  .row p:last-child {
+    margin-bottom: 0; }
+
+.row1 {
+  width: 65.5172413793%;
+  float: left;
+  margin-right: 3.4482758621%; }
+  .row1 .column {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+
+.row2 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  .row2 .column {
+    width: 48.275862069%;
+    float: left; }
+    .row2 .column:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .row2 .column:nth-child(2n + 2) {
+      margin-left: 51.724137931%;
+      margin-right: -100%;
+      clear: none; }
+
 .course-table-headers,
 .course-table-row {
   cursor: pointer;
@@ -1472,6 +1509,8 @@ POSTS & CONTENT STYLES
 
 .controls {
   margin: 2em 0;
+  border: 1px solid #f8f9fa;
+  padding: 1em;
   max-width: 940px;
   margin-left: auto;
   margin-right: auto; }

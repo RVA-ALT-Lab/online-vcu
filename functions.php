@@ -370,4 +370,12 @@ function get_development_scripts(){
 		'comment-form'
 	) );
 
+
+function onlinevcu_button( $atts, $content = null ) {
+  return '<button>' . $content . '</button>';
+}
+add_shortcode( 'button', 'onlinevcu_button' );
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

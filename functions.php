@@ -378,4 +378,34 @@ add_shortcode( 'button', 'onlinevcu_button' );
 
 
 
+
+
+
+
+function qod_add_custom_meta_to_posts( $data, $post, $context ) {
+  // We only want to modify the 'view' context, for reading posts
+  if ( $context !== 'view' || is_wp_error( $data ) ) {
+    return $data;
+  }
+  
+  $post_id = $post['ID'];
+   
+  $degree = get_field( 'degree', $post_id );
+  $department = get_field( 'department', $post_id );
+  $mode = get_field( 'mode', $post_id );
+
+  $data['degree'] = $degree;
+  $data['department'] = $department;
+  $data['mode'] = $mode;
+
+  return $data;
+}
+
+add_filter( 'json_prepare_post', 'qod_add_custom_meta_to_posts', 10, 3 );
+
+
+
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

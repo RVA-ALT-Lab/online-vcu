@@ -99,6 +99,33 @@
 			@include gallery(4 of 12);
 		}
 	}
+
+}
+
+.page-template-page-t-programs .controls{
+	.global{
+		// @include span( first 6 of 12 );
+		// @include span( last 6 of 12 );
+		@include span( first 12 of 12 );
+
+		.search{
+			@include span(first);
+		}
+
+		.filter{
+			@include span( 3 of 12 )
+		}
+
+		.feedback{
+			color: red;
+		}
+
+		.reset{
+			float: right;
+		}
+
+
+	}
 }
 
 button{

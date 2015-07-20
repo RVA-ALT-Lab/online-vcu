@@ -1,0 +1,23 @@
+article.program{
+	@include container($wrapper-width);
+	margin-top: 2em;
+	margin-bottom: 6em;
+
+	.entry-content{
+		@include span(last 6 of 10);
+
+		padding-top: 1.5em;
+	}
+
+	.program-details{
+		@include span(first 4 of 10);
+
+		// background-color: $light-gray;
+		padding: 1.5em;
+		border: 1px solid $gray;
+
+		p{
+			margin: 0 0 1.5em 0;
+		}
+	}
+}

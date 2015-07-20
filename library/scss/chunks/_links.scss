@@ -3,6 +3,8 @@ LINK STYLES
 *********************/
 
 a, a:visited {
+  text-decoration: none;
+  transition: all .3s ease;
   color: $link-color;
 
   /* on hover */

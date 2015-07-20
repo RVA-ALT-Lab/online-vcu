@@ -18,8 +18,8 @@
 						)); ?>
 					</nav>
 
-					<p>Online@VCU 1000<br/>
-					Floyd Ave, Suite 4102 | Richmond, Virginia 23284 online@vcu.edu</p>
+					<p>Online@VCU <br/>
+					1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu">online@vcu.edu</a></p>
 					<p>Division of the Vice Provost for Learning Innovation and Student Success <br/>
 					Office of the Provost | Virginia Commonwealth University</p>
 

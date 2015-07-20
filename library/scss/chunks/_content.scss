@@ -90,6 +90,8 @@ POSTS & CONTENT STYLES
       ul, ol, table, dl {}
 
       ul, ol {
+        
+        margin: 0 0 1.5em 0;
 
         li {}
 
@@ -102,8 +104,13 @@ POSTS & CONTENT STYLES
       }
 
       ol {
+        
+        list-style-type: decimal;
+        margin-left: 2em;
 
-        li {}
+        li {
+          margin-bottom: .75em;
+        }
 
       }
 

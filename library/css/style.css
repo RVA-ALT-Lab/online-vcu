@@ -1047,12 +1047,14 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #e96763;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #FEBE10;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #e3403b; }
+    color: #323944; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1339,6 +1341,13 @@ POSTS & CONTENT STYLES
       */ }
   .entry-content p {
     margin: 0 0 1.5em; }
+  .entry-content ul, .entry-content ol {
+    margin: 0 0 1.5em 0; }
+  .entry-content ol {
+    list-style-type: decimal;
+    margin-left: 2em; }
+    .entry-content ol li {
+      margin-bottom: .75em; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;
@@ -1560,11 +1569,64 @@ POSTS & CONTENT STYLES
         margin-right: -100%;
         clear: none; }
 
+.page-template-page-t-programs .controls .global {
+  width: 100%;
+  float: left;
+  margin-right: 3.4482758621%; }
+  .page-template-page-t-programs .controls .global .search {
+    float: left;
+    margin-right: 3.4482758621%; }
+  .page-template-page-t-programs .controls .global .filter {
+    width: 22.4137931034%;
+    float: left;
+    margin-right: 3.4482758621%; }
+  .page-template-page-t-programs .controls .global .feedback {
+    color: red; }
+  .page-template-page-t-programs .controls .global .reset {
+    float: right; }
+
 button {
   margin: 1em 0;
   border: none;
   background-color: #FEBE10;
   padding: 1em; }
+
+article.program {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 6em; }
+  article.program:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  article.program .entry-content {
+    width: 58.3333333333%;
+    float: right;
+    margin-right: 0;
+    padding-top: 1.5em; }
+  article.program .program-details {
+    width: 37.5%;
+    float: left;
+    margin-right: 4.1666666667%;
+    padding: 1.5em;
+    border: 1px solid #eaedf2; }
+    article.program .program-details p {
+      margin: 0 0 1.5em 0; }
+
+.program-link {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+a.program-link, a.program-link:visited {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #323944;
+  /* on hover */ }
+  a.program-link:hover, a.program-link:focus, a.program-link:visited:hover, a.program-link:visited:focus {
+    color: #323944; }
 
 /******************************************************************
 PAGE NAVI STYLES

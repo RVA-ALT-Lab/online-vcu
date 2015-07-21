@@ -16,8 +16,22 @@
 		}
 	}
 
+	.header{
+		display: none;
+
+		@include breakpoint(650px){
+			display: block;
+		}
+	}
+
 	.course{
-		@include span(first 4 of 12);
+		margin-bottom: 1em;
+
+		@include breakpoint(650px){
+			@include span(first 4 of 12);
+			margin-bottom: 0;
+		}
+		
 
 		.course-title{
 			font-weight: bold;
@@ -26,7 +40,12 @@
 	}
 
 	.details{
-		@include span( 6 of 12 );
+		margin-bottom: 1em;
+
+		@include breakpoint(650px){
+			margin-bottom: 0;
+			@include span( 6 of 12 );
+		}
 
 		.full-description{
 			margin: 1em 0;
@@ -46,7 +65,11 @@
 	}
 
 	.mode{
-		@include span( last 2 of 12 );
+		margin-bottom: 1em;
+		@include breakpoint(650px){
+			margin-bottom: 0;
+			@include span( last 2 of 12 );
+		}
 	}
 
 }
@@ -78,7 +101,7 @@
 		@include span( first 12 of 12 );
 
 		.search{
-			@include span(first)
+			// @include span(first)
 		}
 
 		.feedback{
@@ -96,7 +119,10 @@
 		@include span( last 12 of 12 ); 
 
 		select{
-			@include gallery(4 of 12);
+			@include breakpoint(650px){
+				@include gallery(4 of 12);
+			}
+			
 		}
 	}
 
@@ -109,7 +135,7 @@
 		@include span( first 12 of 12 );
 
 		.search{
-			@include span(first);
+			// @include span(first);
 		}
 
 		.filter{

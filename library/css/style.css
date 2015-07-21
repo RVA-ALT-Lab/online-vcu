@@ -713,11 +713,11 @@ textarea,
   box-shadow: none;
   border: 0;
   width: 100%;
-  max-width: 400px;
   font-family: "Karla", sans-serif;
   background-color: #eaedf2;
   -webkit-transition: background-color 0.24s ease-in-out;
-  transition: background-color 0.24s ease-in-out; }
+  transition: background-color 0.24s ease-in-out;
+  box-sizing: border-box; }
   input[type="text"]:focus,
   input[type="text"]:active,
   input[type="password"]:focus,
@@ -1043,6 +1043,18 @@ LAYOUT & GRID STYLES
 .article-footer {
   overflow: hidden; }
 
+.content,
+.page-title,
+.inner-header,
+.footer {
+  padding: 0 2%; }
+  @media (min-width: 940px) {
+    .content,
+    .page-title,
+    .inner-header,
+    .footer {
+      padding: 0; } }
+
 /*********************
 LINK STYLES
 *********************/
@@ -1332,6 +1344,7 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   background-color: #fff;
+  margin-bottom: 6em;
   /*
       image alignment on a screen this size may be
       a bit difficult. It's set to start aligning
@@ -1342,6 +1355,8 @@ POSTS & CONTENT STYLES
     margin: 0 0 1.5em; }
   .entry-content ul, .entry-content ol {
     margin: 0 0 1.5em 0; }
+    .entry-content ul.pagination, .entry-content ol.pagination {
+      margin: 1.5em 0; }
   .entry-content ol {
     list-style-type: decimal;
     margin-left: 2em; }
@@ -1433,33 +1448,35 @@ POSTS & CONTENT STYLES
   .row p:last-child {
     margin-bottom: 0; }
 
-.row1 {
-  width: 65.5172413793%;
-  float: left;
-  margin-right: 3.4482758621%; }
-  .row1 .column {
+@media (min-width: 650px) {
+  .row1 {
+    width: 65.5172413793%;
+    float: left;
+    margin-right: 3.4482758621%; }
+    .row1 .column {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+
+@media (min-width: 650px) {
+  .row2 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0; }
-
-.row2 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0; }
-  .row2 .column {
-    width: 48.275862069%;
-    float: left; }
-    .row2 .column:nth-child(2n + 1) {
-      margin-left: 0;
-      margin-right: -100%;
-      clear: both;
-      margin-left: 0; }
-    .row2 .column:nth-child(2n + 2) {
-      margin-left: 51.724137931%;
-      margin-right: -100%;
-      clear: none; }
+    .row2 .column {
+      width: 48.275862069%;
+      float: left; }
+      .row2 .column:nth-child(2n + 1) {
+        margin-left: 0;
+        margin-right: -100%;
+        clear: both;
+        margin-left: 0; }
+      .row2 .column:nth-child(2n + 2) {
+        margin-left: 51.724137931%;
+        margin-right: -100%;
+        clear: none; } }
 
 .course-table-headers,
 .course-table-row {
@@ -1482,20 +1499,37 @@ POSTS & CONTENT STYLES
     .course-table-headers:nth-child(odd):hover,
     .course-table-row:nth-child(odd):hover {
       background-color: #eaedf2; }
+  .course-table-headers .header,
+  .course-table-row .header {
+    display: none; }
+    @media (min-width: 650px) {
+      .course-table-headers .header,
+      .course-table-row .header {
+        display: block; } }
   .course-table-headers .course,
   .course-table-row .course {
-    width: 31.0344827586%;
-    float: left;
-    margin-right: 3.4482758621%; }
+    margin-bottom: 1em; }
+    @media (min-width: 650px) {
+      .course-table-headers .course,
+      .course-table-row .course {
+        width: 31.0344827586%;
+        float: left;
+        margin-right: 3.4482758621%;
+        margin-bottom: 0; } }
     .course-table-headers .course .course-title,
     .course-table-row .course .course-title {
       font-weight: bold;
       text-transform: capitalize; }
   .course-table-headers .details,
   .course-table-row .details {
-    width: 48.275862069%;
-    float: left;
-    margin-right: 3.4482758621%; }
+    margin-bottom: 1em; }
+    @media (min-width: 650px) {
+      .course-table-headers .details,
+      .course-table-row .details {
+        margin-bottom: 0;
+        width: 48.275862069%;
+        float: left;
+        margin-right: 3.4482758621%; } }
     .course-table-headers .details .full-description,
     .course-table-row .details .full-description {
       margin: 1em 0;
@@ -1511,9 +1545,14 @@ POSTS & CONTENT STYLES
         opacity: 0; }
   .course-table-headers .mode,
   .course-table-row .mode {
-    width: 13.7931034483%;
-    float: right;
-    margin-right: 0; }
+    margin-bottom: 1em; }
+    @media (min-width: 650px) {
+      .course-table-headers .mode,
+      .course-table-row .mode {
+        margin-bottom: 0;
+        width: 13.7931034483%;
+        float: right;
+        margin-right: 0; } }
 
 .controls {
   margin: 2em 0;
@@ -1540,9 +1579,6 @@ POSTS & CONTENT STYLES
     width: 100%;
     float: left;
     margin-right: 3.4482758621%; }
-    .controls .global .search {
-      float: left;
-      margin-right: 3.4482758621%; }
     .controls .global .feedback {
       color: red; }
     .controls .global .reset {
@@ -1551,30 +1587,28 @@ POSTS & CONTENT STYLES
     width: 100%;
     float: right;
     margin-right: 0; }
-    .controls .filters select {
-      width: 31.0344827586%;
-      float: left; }
-      .controls .filters select:nth-child(3n + 1) {
-        margin-left: 0;
-        margin-right: -100%;
-        clear: both;
-        margin-left: 0; }
-      .controls .filters select:nth-child(3n + 2) {
-        margin-left: 34.4827586207%;
-        margin-right: -100%;
-        clear: none; }
-      .controls .filters select:nth-child(3n + 3) {
-        margin-left: 68.9655172414%;
-        margin-right: -100%;
-        clear: none; }
+    @media (min-width: 650px) {
+      .controls .filters select {
+        width: 31.0344827586%;
+        float: left; }
+        .controls .filters select:nth-child(3n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both;
+          margin-left: 0; }
+        .controls .filters select:nth-child(3n + 2) {
+          margin-left: 34.4827586207%;
+          margin-right: -100%;
+          clear: none; }
+        .controls .filters select:nth-child(3n + 3) {
+          margin-left: 68.9655172414%;
+          margin-right: -100%;
+          clear: none; } }
 
 .page-template-page-t-programs .controls .global {
   width: 100%;
   float: left;
   margin-right: 3.4482758621%; }
-  .page-template-page-t-programs .controls .global .search {
-    float: left;
-    margin-right: 3.4482758621%; }
   .page-template-page-t-programs .controls .global .filter {
     width: 22.4137931034%;
     float: left;

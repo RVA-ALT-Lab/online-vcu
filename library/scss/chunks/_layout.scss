@@ -18,3 +18,13 @@ LAYOUT & GRID STYLES
 .article-footer {
   overflow: hidden;
 }
+
+.content,
+.page-title,
+.inner-header,
+.footer{
+  padding: 0 2%;
+  @include breakpoint($wrapper-width){
+    padding: 0;
+  }
+}

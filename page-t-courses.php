@@ -145,6 +145,7 @@
 
 			<div class="mode">
 				<span class="course-mode {{filter}}">{{data.mode}}</span>
+				<span ng-if="data.mode_desc" class='popup right'>{{data.mode_desc}}</span>
 			</div>
 		</div>
 

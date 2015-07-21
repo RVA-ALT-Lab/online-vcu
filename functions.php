@@ -393,10 +393,25 @@ function qod_add_custom_meta_to_posts( $data, $post, $context ) {
   $degree = get_field( 'degree', $post_id );
   $department = get_field( 'department', $post_id );
   $mode = get_field( 'mode', $post_id );
+  $mode_desc = "";
+
+  if ($mode === "Entirely Online"){
+    $mode_desc = "Apart from a possible face-to-face orientation or in-person exam, the instructor and students use electronic means to interact 100% of the time. The instructor and students interact mostly at different times e.g. recorded lectures or discussion boards.";
+  } elseif ( $mode === "Online and in-class (Asynchronous)"){
+    $mode_desc = "The instructor and students meet in class less than 50% of the time. Online instruction is used the rest of the time. Online interaction between the students and instructor occurs mostly at different times e.g. recorded lectures or discussion boards.";
+  } elseif ( $mode === "Online and in-class (Synchronous)"){
+    $mode_desc = "The instructor and students meet in class less than 50% of the time. Online instruction is used the rest of the time. Online instruction occurs at scheduled times when both instructor and students are online at the same time e.g. video conference, teleconference, or live virtual classroom settings.";
+  } elseif ( $mode === "Video Conference"){
+    $mode_desc = "Apart from a possible face-to-face orientation or initial class meeting, for formal instruction, the instructor and students use electronic means to interact 100% of the time. The instructor and students interact mostly at the same time e.g. video conference, teleconference, or live virtual classroom settings.";
+  } elseif ( $mode === "Correspondence Course"){
+    $mode_desc = "";
+  }
+
 
   $data['degree'] = $degree;
   $data['department'] = $department;
   $data['mode'] = $mode;
+  $data['mode_desc'] = $mode_desc;
 
   return $data;
 }

@@ -94,14 +94,13 @@
 		<div class="course-table-row" 
 			ng-click="showme = !showme"
 			
-			dir-paginate='
+			ng-repeat='
 					data in data | 
 					orderBy: filter : false |
 					filter:search | 
 					filter:filterDegree.degree |
 					filter:filterDepartment.department |
-					filter:filterMode.mode |
-					itemsPerPage: 10 
+					filter:filterMode.mode
 				'
 			>
 			<a class="program-link cf" href="{{data.link}}">
@@ -117,24 +116,14 @@
 
 				<div class="mode">
 					<span class="course-mode {{filter}}">{{data.mode}}</span>
+					<span ng-if="data.mode_desc" class='popup right'>{{data.mode_desc}}</span>
 				</div>
 
 			</a>
 		</div>
 
-		
-		<dir-pagination-controls boundary-links='true' on-page-change='pageChangeHandler(newPageNumber)' template-url='<?php echo get_template_directory_uri(); ?>/library/templates/dirPagination.tpl.html'></dir-pagination-controls>
-
-
-
-
   </div>
 </div>
-
-
-
-
-
 
 
 								</section>

@@ -70,7 +70,7 @@
                     }                    
                   
                     if ($mode){
-                      $output .= "<p><strong>{$mode}</strong></p>";
+                      $output .= "<p class='mode'><strong>{$mode}</strong><span class='popup'>This is your amazing description that will answer all your questions.</span></p>";
                     }
 
                     $output .= "<ul>";
@@ -89,7 +89,7 @@
                     if( have_rows('links') ): while ( have_rows('links') ) : the_row();
                       $link_url = get_sub_field('link_url');
                       $link_text = get_sub_field('link_text');
-                      $output .= "<li><a href='{$link_url}'>'{$link_text}'</a>";
+                      $output .= "<li><a href='{$link_url}'>{$link_text}</a>";
                     endwhile;
                     endif;
 
@@ -98,32 +98,6 @@
 
                     echo $output;
                   ?>
-                  
-                  
-
-
-                  <?php
-                  // check if the repeater field has rows of data
-                  if( have_rows('links') ):
-                    echo "<ul>";
-                    // loop through the rows of data
-                      while ( have_rows('links') ) : the_row();
-                  ?>
-                        <li><a href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a>
-                  <?php
-                      endwhile;
-
-                  else :
-
-                      // no rows found
-                    echo "</ul>";
-                  endif;
-                  ?>
-
-
-
-
-
 
                 </aside>
 

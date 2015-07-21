@@ -1331,7 +1331,6 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  overflow: hidden;
   background-color: #fff;
   /*
       image alignment on a screen this size may be
@@ -1630,6 +1629,27 @@ a.program-link, a.program-link:visited {
 
 .line {
   display: block; }
+
+.mode {
+  position: relative; }
+  .mode .popup {
+    display: block;
+    position: absolute;
+    width: 300px;
+    padding: 5px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #eaedf2;
+    box-shadow: 1px 1px 1px #eaedf2;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease; }
+    .mode .popup.right {
+      right: 0; }
+
+.mode:hover .popup {
+  z-index: 1;
+  opacity: 1; }
 
 /******************************************************************
 PAGE NAVI STYLES

@@ -6,6 +6,10 @@ FOOTER STYLES
   clear: both;
   background-color: black;
   color: $white;
+
+  a:hover{
+    background-color: $white;
+  }
 }
 
 .inner-footer{

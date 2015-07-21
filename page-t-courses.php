@@ -108,6 +108,13 @@
 			<div class="mode header"><strong>Mode</strong></div>
 		</div>
 
+	  <div ng-show='spinner' class='spinner-wrap'>
+        <div class='spinner'>
+          <div class='ball'></div>
+          <p>LOADING</p>
+        </div>
+      </div>
+
 		<div class="course-table-row" 
 			ng-click="showme = !showme"
 			
@@ -124,13 +131,13 @@
 
 			
 
-			<div class="course">
+			<div class="course" ng-cloak>
 				<span class="course-title {{filter}}">{{data.title}}</span><br/>
 				<span class="course-instructor {{filter}}">{{data.instructor}}</span><br/>
 				<span class="course-term {{filter}}">{{data.term}}</span> from <i>May 18 to Jun 21</i>			
 			</div>		
 
-			<div class="details">
+			<div class="details" ng-cloak>
 				<span class="course-college {{filter}}">{{data.college}}</span><br/>
 				<span class="course-dept {{filter}}">{{data.dept}}</span><br/>
 				CRN: <span class="course-crn {{filter}}">{{data.crn}}</span><br/>
@@ -143,7 +150,7 @@
 				</div>
 			</div>	
 
-			<div class="mode">
+			<div class="mode" ng-cloak>
 				<span class="course-mode {{filter}}">{{data.mode}}</span>
 				<span ng-if="data.mode_desc" class='popup right'>{{data.mode_desc}}</span>
 			</div>

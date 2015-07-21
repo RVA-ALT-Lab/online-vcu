@@ -39,9 +39,7 @@
 
 
 <div ng-app="benson">
-  <div ng-controller="MainController">
-
-	
+  <div ng-controller="MainController">	
 			
 		<div class="controls">
 
@@ -91,7 +89,15 @@
 			<div class="mode header"><strong>Mode</strong></div>
 		</div>
 
-		<div class="course-table-row" 
+
+	  <div ng-show='spinner' class='spinner-wrap'>
+        <div class='spinner'>
+          <div class='ball'></div>
+          <p>LOADING</p>
+        </div>
+      </div>
+
+		<div ng-cloak class="course-table-row" 
 			ng-click="showme = !showme"
 			
 			ng-repeat='
@@ -103,20 +109,20 @@
 					filter:filterMode.mode
 				'
 			>
-			<a class="program-link cf" href="{{data.link}}">
+			<a class="program-link cf" href="{{data.link}}" ng-cloak>
 
 				<div class="course">
-					<span class="course-title {{filter}}">{{data.title}}</span><br/>
-					<span class="course-subject {{filter}}">{{data.meta.subject}}</span><br/>
+					<span class="course-title {{filter}}" ng-cloak >{{data.title}}</span><br/>
+					<span class="course-subject {{filter}}" ng-cloak >{{data.meta.subject}}</span><br/>
 				</div>		
 
 				<div class="details">
-					<span class="course-college {{filter}}">{{data.meta.department}}</span><br/>
+					<span class="course-college {{filter}}" ng-cloak >{{data.meta.department}}</span><br/>
 				</div>	
 
 				<div class="mode">
-					<span class="course-mode {{filter}}">{{data.mode}}</span>
-					<span ng-if="data.mode_desc" class='popup right'>{{data.mode_desc}}</span>
+					<span class="course-mode {{filter}}" ng-cloak >{{data.mode}}</span>
+					<span ng-if="data.mode_desc" class='popup right' ng-cloak >{{data.mode_desc}}</span>
 				</div>
 
 			</a>

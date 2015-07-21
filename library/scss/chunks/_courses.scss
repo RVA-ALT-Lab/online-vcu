@@ -50,6 +50,7 @@
 		.full-description{
 			margin: 1em 0;
 			height: auto;
+			opacity: 0;
 
 			&.ng-hide-add.ng-hide-add-active,
 			&.ng-hide-remove.ng-hide-remove-active {

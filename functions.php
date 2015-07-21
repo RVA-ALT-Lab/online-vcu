@@ -378,6 +378,13 @@ add_shortcode( 'button', 'onlinevcu_button' );
 
 
 
+function onlinevcu_linklist( $atts, $content = null ) {
+  return '<div class="linklist">' . $content . '</div>';
+}
+add_shortcode( 'linklist', 'onlinevcu_linklist' );
+
+
+
 
 
 

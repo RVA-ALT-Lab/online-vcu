@@ -314,3 +314,33 @@ POSTS & CONTENT STYLES
   }
 
 }
+
+
+.linklist{
+  ul{
+    // border: 1px solid $light-gray;
+
+    li{
+      a{
+        padding: 10px;
+        display: block;
+    
+        &:hover{
+          background-color: $yellow;
+          color: $white;
+        }
+      }
+
+      &:nth-child(odd){
+        a{
+          background-color: $light-gray;
+
+          &:hover{
+            background-color: $yellow;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

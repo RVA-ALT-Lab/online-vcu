@@ -17,15 +17,89 @@
                 </section>
 
                 <aside class="program-details entry-content">
-                  <p><strong><?php the_field('department'); ?></strong><br/>
-                  <strong><?php the_field('subject'); ?></strong></p>
+
+                  <?php 
+                    $output = "";
+
+                    $department = get_field('department');
+                    $degree = get_field('degree');
+                    $subject = get_field('subject');
+                    $commitment = get_field('commitment');
+                    $min_credits = get_field('minimum_credit_hours');
+                    $min_gpa = get_field('minimum_gpa_for_admission');
+                    $mode = get_field('mode');
+
+                    $links = get_field('links');
+                    $program_website = get_field('links_program_website');
+                    $curriculum = get_field('links_curriculum');
+                    $request_info= get_field('links_request_information');
+                    
+                    if ( $department || $degree || $subject ){
+                      $output .= "<p>";
+                    }
+                      if( $department ){
+                        $output .= "<span class='line'><strong>{$department}</strong></span>";
+                      }
+
+                      if( $degree || $subject ){
+                        $output .= "<span class='line'><strong>{$degree} {$subject}</strong></span>";
+                      }
+
+                    if ( $department || $degree || $subject ){
+                      $output .= "</p>";
+                    }
+
+                    if ($commitment || $min_credits || $min_gpa ) {
+                      $output .= "<p>";
+                    }
+
+                      if ($commitment){
+                        $output .= "<span class='line'><strong>{$commitment}</strong></span>";
+                      }
+
+                      if ($min_credits){
+                        $output .="<span class='line'><strong>{$min_credits}</strong> min credit hours </span>";
+                      }
+
+                      if ($min_gpa){
+                        $output .= "<span class='line'><strong>{$min_gpa}</strong> min GPA for admission<span>";
+                      }
+
+                    if ($commitment || $min_credits || $min_gpa ) {
+                      $output .= "</p>";
+                    }                    
                   
-                  <p><strong><?php the_field('commitment'); ?></strong><br/>
-                  <strong><?php the_field('minimum_credit_hours'); ?></strong> min credit hours <br/>
-                  <strong><?php the_field('minimum_gpa_for_admission'); ?></strong> min GPA for admission</p>
+                    if ($mode){
+                      $output .= "<p><strong>{$mode}</strong></p>";
+                    }
 
-                  <p><strong><?php the_field('mode'); ?></strong></p>
+                    $output .= "<ul>";
+                    $output .= "<li><a href='http://www.enrollment.vcu.edu/accounting/tuition-and-fees/tuition-and-fees-calculator/'>Tuition Calculator</a></li>";
 
+                      if ($program_website){
+                        $output .= "<li><a href='{$program_website}'>Website</a></li>";
+                      }
+                      if ($curriculum){
+                        $output .= "<li><a href='{$curriculum}'>Curriculum</a></li>";
+                      }
+                      if ($request_info){
+                        $output .= "<li><a href='{request_info}'>Request Info</a></li>";
+                      }
+
+                    if( have_rows('links') ): while ( have_rows('links') ) : the_row();
+                      $link_url = get_sub_field('link_url');
+                      $link_text = get_sub_field('link_text');
+                      $output .= "<li><a href='{$link_url}'>'{$link_text}'</a>";
+                    endwhile;
+                    endif;
+
+
+                    $output .= "</ul>";
+
+                    echo $output;
+                  ?>
+                  
+                  
 
 
                   <?php

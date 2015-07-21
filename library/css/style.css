@@ -1628,6 +1628,9 @@ a.program-link, a.program-link:visited {
   a.program-link:hover, a.program-link:focus, a.program-link:visited:hover, a.program-link:visited:focus {
     color: #323944; }
 
+.line {
+  display: block; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

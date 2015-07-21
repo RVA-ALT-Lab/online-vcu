@@ -110,11 +110,10 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-// $('.course-table-row').on('click', function(){
-//   // $(this).find('.full-description').slidetoggle();
-
-//   console.log('butter');
-// });
-
+	$('.hamburger').on('click', function(){
+		$('.nav').toggleClass('active');
+		$('.closed').toggleClass('active');
+		$('.open').toggleClass('active');
+	});
 
 }); /* end of as page load scripts */

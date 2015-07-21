@@ -11,13 +11,19 @@ HEADER STYLES
 	// height: 184px;
     
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 
     .inner-header{
     	background: $white;
     	line-height: 59px;
-	    height: 59px;
+	    @include breakpoint($wrapper-width){
+        height: 59px;
+      }
+      
+      
       box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+      position: relative;
+      // z-index: 100;
 
       .inner-header-wrap{
         @include container($wrapper-width);

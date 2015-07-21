@@ -64,8 +64,8 @@
 						<?php // if you'd like to use the site description you can un-comment it below ?>
 						<?php // bloginfo('description'); ?>
 
-
-						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<div class="hamburger"><span class="closed">&#9776;</span><span class="open">&#10005;</span> MENU</div>
+						<nav class="cf" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(
 	    					'container' => false,                           // remove nav container
 	    					'container_class' => 'menu',                 // class of container (should you choose to use it)
@@ -79,7 +79,6 @@
 		        			'depth' => 0,                                   // limit the depth of the nav
 	    					'fallback_cb' => ''                             // fallback function (if there is one)
 							)); ?>
-
 						</nav>
 					</div>
 				</div>
@@ -107,7 +106,5 @@
 <video autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
 	<source src="<?php echo get_template_directory_uri(); ?>/library/videos/montage4mark.webm" type="video/webm">
 </video>
-
-
 
 			</header>

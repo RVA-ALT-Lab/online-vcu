@@ -10,11 +10,7 @@
 
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf program'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
-                <section class="entry-content cf" itemprop="articleBody">
 
-                  <?php the_content(); ?>
-                  
-                </section>
 
                 <aside class="program-details entry-content">
 
@@ -101,6 +97,13 @@
 
                 </aside>
 
+
+
+                <section class="entry-content cf" itemprop="articleBody">
+
+                  <?php the_content(); ?>
+                  
+                </section>
 
               </article> <?php // end article ?>
 

@@ -1357,6 +1357,9 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.home .entry-content {
+  margin-bottom: 0; }
+
 .content {
   background-color: #fff; }
 
@@ -1706,18 +1709,24 @@ article.program {
     display: block;
     clear: both; }
   article.program .entry-content {
-    width: 58.3333333333%;
-    float: right;
-    margin-right: 0;
     padding-top: 1.5em; }
+    @media (min-width: 650px) {
+      article.program .entry-content {
+        width: 58.3333333333%;
+        float: right;
+        margin-right: 0; } }
   article.program .program-details {
-    width: 37.5%;
-    float: left;
-    margin-right: 4.1666666667%;
     padding: 1.5em;
     border: 1px solid #eaedf2; }
+    @media (min-width: 650px) {
+      article.program .program-details {
+        width: 37.5%;
+        float: left;
+        margin-right: 4.1666666667%; } }
     article.program .program-details p {
       margin: 0 0 1.5em 0; }
+    article.program .program-details.entry-content {
+      margin-bottom: 0; }
 
 .program-link {
   display: block;

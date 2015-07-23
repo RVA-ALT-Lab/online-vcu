@@ -3,21 +3,18 @@ HEADER STYLES
 *********************/
 
 .header {
-	// background: $white;
 	text-transform: uppercase;
-	// background-image: url('https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg');
- //  background-size: cover;
- //  background-position: bottom center;
-	// height: 184px;
-    
     position: relative;
     // overflow: hidden;
 
     .inner-header{
     	background: $white;
-    	line-height: 120px;
+      line-height: 120px;
+      min-height: 93px;
+
 	    @include breakpoint($wrapper-width){
         height: 93px;
+        line-height: 120px;
       }
       
       
@@ -32,7 +29,6 @@ HEADER STYLES
 }
 
 #logo {
-	// display: inline-block;
 	float: left;
   margin: 0 2em 0 0;
   width: 190px;

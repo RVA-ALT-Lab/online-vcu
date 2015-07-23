@@ -50,9 +50,14 @@ and more scalable.
     margin: 0;
     clear: both;
     text-align: right;
-  
     max-height: 0;
     transition: all .3s ease;
+    margin-top: 82px;
+    line-height: 50px;
+
+    @include breakpoint($wrapper-width){
+      line-height: 120px;
+    }
 
     &.active{
       max-height: 400px;

@@ -958,6 +958,9 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
+.gform_wrapper .ginput_complex label {
+  display: none; }
+
 /*********************
 IMPORTING CHUNKS
 I'm calling these chunks cause I don't the proper term if one even exists.
@@ -1723,6 +1726,7 @@ POSTS & CONTENT STYLES
   .page-template-page-t-programs .controls .global .reset {
     float: right; }
 
+.button,
 button {
   margin: 1em 0;
   border: none;

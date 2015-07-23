@@ -121,7 +121,7 @@
 
 		select{
 			@include breakpoint(650px){
-				@include gallery(4 of 12);
+				@include gallery(6 of 12);
 			}
 			
 		}

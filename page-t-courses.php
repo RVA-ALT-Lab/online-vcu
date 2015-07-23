@@ -55,6 +55,13 @@
 				    <option value="">All Colleges</option>
 				</select>
 
+				<select class="filter-term" ng-model="filterTerm" 
+						ng-options="
+						data.term for data in data | 
+						unique:'term' ">
+				    <option value=""> All Terms</option>
+				</select>
+
 				<select class="filter-dept" ng-model="filterDept" 
 						ng-options="
 						data.dept for data in data | 
@@ -81,6 +88,7 @@
 						search.$='';
 						filterMode=''; 
 						filterCollege='';
+						filterTerm='';
 						filterDept='';">Reset All</button>
 			</div>
 
@@ -92,6 +100,7 @@
 				filter:search | 
 				filter:filterCollege.college |
 				filter:filterMode.mode |
+				filter:filterTerm.term |
 				filter:filterDept.dept ).length"
 			when="{
 				'0': '0 courses match your criteria.',
@@ -125,6 +134,7 @@
 					filter:filterCollege.college |
 					filter:filterMode.mode |
 					filter:filterDept.dept |
+					filter:filterTerm.term |
 					itemsPerPage: 10 
 				'
 			>
@@ -134,7 +144,7 @@
 			<div class="course" ng-cloak>
 				<span class="course-title {{filter}}">{{data.title}}</span><br/>
 				<span class="course-instructor {{filter}}">{{data.instructor}}</span><br/>
-				<span class="course-term {{filter}}">{{data.term}}</span> from <i>May 18 to Jun 21</i>			
+				<span class="course-term {{filter}}">{{data.term}}</span> from {{ dateFormat(data.start) | date:'MMM d'}} to {{ dateFormat(data.end) | date:'MMM d'}}		
 			</div>		
 
 			<div class="details" ng-cloak>
@@ -158,8 +168,6 @@
 
 		
 		<dir-pagination-controls boundary-links='true' on-page-change='pageChangeHandler(newPageNumber)' template-url='<?php echo get_template_directory_uri(); ?>/library/templates/dirPagination.tpl.html'></dir-pagination-controls>
-
-
 
 	</div>    
 

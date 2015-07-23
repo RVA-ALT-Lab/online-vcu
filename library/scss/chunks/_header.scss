@@ -15,9 +15,9 @@ HEADER STYLES
 
     .inner-header{
     	background: $white;
-    	line-height: 59px;
+    	line-height: 120px;
 	    @include breakpoint($wrapper-width){
-        height: 59px;
+        height: 93px;
       }
       
       
@@ -35,7 +35,31 @@ HEADER STYLES
 	// display: inline-block;
 	float: left;
   margin: 0 2em 0 0;
+  width: 190px;
+  position: relative;
+  top: 20px;
+  
+  img{
+    transition: all .3s ease;
+    max-width: 190px;
+  }
 
+  .monotone{
+    position: absolute;
+  }
+
+  .color{
+    position: absolute;
+    opacity: 0;
+  }
+
+  &:hover .monotone{
+    opacity: 0;
+  }
+
+  &:hover .color{
+    opacity: 1;
+  }
 
   a {
       color: $black;

@@ -17,15 +17,20 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 					</nav>
+					
+					<div class="info">
+						<p>1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu">online@vcu.edu</a></p>
+						<p>Division of the Vice Provost for Learning Innovation and Student Success <br/>
+						Office of the Provost | Virginia Commonwealth University</p>
 
-					<p>Online@VCU <br/>
-					1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu">online@vcu.edu</a></p>
-					<p>Division of the Vice Provost for Learning Innovation and Student Success <br/>
-					Office of the Provost | Virginia Commonwealth University</p>
 
+						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+	          			<p class="last-modified">Last modified: <?php the_modified_time('F j, Y'); ?></p>
+          			</div>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-          <p class="last-modified">Last modified: <?php the_modified_time('F j, Y'); ?></p>
+          			<div class="full-logo">
+          				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-full.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-full.jpg'"></a>
+          			</div>
 				</div>
 
 			</footer>

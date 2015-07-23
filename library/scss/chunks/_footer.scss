@@ -8,7 +8,29 @@ FOOTER STYLES
   color: $white;
 
   a:hover{
-    background-color: $white;
+    opacity: .9;
+    color: $yellow;
+
+    img{
+      opacity: 1;
+    }
+  }
+  
+  .info{
+    @include span(first 8 of 12);
+    p{
+      margin: 0 0 1em 0; 
+    }
+  }
+  .full-logo{
+    @include span(last 4 of 12);
+    
+    text-align: right;
+    img{ 
+      opacity: .5;
+      max-width: 200px;
+      transition: all .3s ease;
+    }
   }
 }
 

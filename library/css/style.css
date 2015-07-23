@@ -1136,12 +1136,12 @@ HEADER STYLES
   position: relative; }
   .header .inner-header {
     background: #fff;
-    line-height: 59px;
+    line-height: 120px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
     position: relative; }
     @media (min-width: 940px) {
       .header .inner-header {
-        height: 59px; } }
+        height: 93px; } }
     .header .inner-header .inner-header-wrap {
       max-width: 940px;
       margin-left: auto;
@@ -1153,7 +1153,22 @@ HEADER STYLES
 
 #logo {
   float: left;
-  margin: 0 2em 0 0; }
+  margin: 0 2em 0 0;
+  width: 190px;
+  position: relative;
+  top: 20px; }
+  #logo img {
+    transition: all 0.3s ease;
+    max-width: 190px; }
+  #logo .monotone {
+    position: absolute; }
+  #logo .color {
+    position: absolute;
+    opacity: 0; }
+  #logo:hover .monotone {
+    opacity: 0; }
+  #logo:hover .color {
+    opacity: 1; }
   #logo a {
     color: #323944;
     font-size: 24px;
@@ -1259,7 +1274,6 @@ and more scalable.
       clear: both;
       float: right;
       position: relative;
-      top: -59px;
       text-align: left;
       border-bottom: 0;
       margin: 0;
@@ -1912,7 +1926,25 @@ FOOTER STYLES
   background-color: black;
   color: #fff; }
   .footer a:hover {
-    background-color: #fff; }
+    opacity: .9;
+    color: #FEBE10; }
+    .footer a:hover img {
+      opacity: 1; }
+  .footer .info {
+    width: 65.5172413793%;
+    float: left;
+    margin-right: 3.4482758621%; }
+    .footer .info p {
+      margin: 0 0 1em 0; }
+  .footer .full-logo {
+    width: 31.0344827586%;
+    float: right;
+    margin-right: 0;
+    text-align: right; }
+    .footer .full-logo img {
+      opacity: .5;
+      max-width: 200px;
+      transition: all 0.3s ease; }
 
 .inner-footer {
   max-width: 940px;

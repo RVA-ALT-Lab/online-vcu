@@ -59,7 +59,12 @@
 				<div class="inner-header">
 					<div class="inner-header-wrap">
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
+							<a href="<?php echo home_url(); ?>" rel="nofollow">
+        <img class="monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz.jpg'">
+        <img class="color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz-hover.jpg'">
+        					</a>
+        				</p>
 
 						<?php // if you'd like to use the site description you can un-comment it below ?>
 						<?php // bloginfo('description'); ?>

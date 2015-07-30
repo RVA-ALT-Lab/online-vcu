@@ -90,11 +90,14 @@
 
 				<?php if ( !is_front_page() ){ ?>
 					<header class="page-title-wrap">
-						<?php if ( !is_404() ){ ?>
-							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-						<?php } else {
+						<?php 
+						if ( is_404() ){
 							echo '<h1 class="page-title" itemprop="headline">(ಠ_ಠ)</h1>';
-							}?>
+						} elseif ( is_search() ){
+							echo '<h1 class="page-title" itemprop="headline">Search</h1>';
+						} else {
+							echo '<h1 class="page-title" itemprop="headline">'. the_title() .'</h1>';
+						}?>
 						
 					</header>
 				<?php } else{

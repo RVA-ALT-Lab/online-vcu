@@ -91,18 +91,7 @@
 	padding: 1em;
 
 	button{
-		background-color: $gray;
-		color: $black;
-		transition: all .3s ease;
-
-		height: 40px;
-		line-height: 40px;
-		padding: 0 1em;
-		margin: 0 0 0 0;
-
-		&:hover{
-			background-color: $light-gray;
-		}
+		padding: 12px;
 	}
 
 	@include container($wrapper-width);
@@ -165,13 +154,7 @@
 	}
 }
 
-.button,
-button{
-	margin: 1em 0;
-	border: none;
-	background-color: $yellow;
-	padding: 1em;
-}
+
 
 
 

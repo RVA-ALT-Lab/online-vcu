@@ -44,8 +44,8 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: $text-color;
-  border-radius: 3px;
+  color: $black;
+  border-radius: 0px;
   vertical-align: middle;
   box-shadow: none;
   border: 0;
@@ -99,6 +99,25 @@ textarea,
     } // end disabled focus
 
   } // end disabled input
+
+  
+  // placeholder text color
+  &::-webkit-input-placeholder {
+     color: $black;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+     color: $black;  
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+     color: $black;  
+  }
+
+  &:-ms-input-placeholder {  
+     color: $black;  
+  }
+
 
 } // end input defaults
 

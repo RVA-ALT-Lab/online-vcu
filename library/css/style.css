@@ -707,8 +707,8 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
-  border-radius: 3px;
+  color: #323944;
+  border-radius: 0px;
   vertical-align: middle;
   box-shadow: none;
   border: 0;
@@ -942,6 +942,80 @@ textarea,
     .field.is-disabled:focus,
     .field.is-disabled:active {
       background-color: #d5edf8; }
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="datetime"]::-webkit-input-placeholder,
+  input[type="datetime-local"]::-webkit-input-placeholder,
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="month"]::-webkit-input-placeholder,
+  input[type="time"]::-webkit-input-placeholder,
+  input[type="week"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="color"]::-webkit-input-placeholder,
+  select::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  .field::-webkit-input-placeholder {
+    color: #323944; }
+  input[type="text"]:-moz-placeholder,
+  input[type="password"]:-moz-placeholder,
+  input[type="datetime"]:-moz-placeholder,
+  input[type="datetime-local"]:-moz-placeholder,
+  input[type="date"]:-moz-placeholder,
+  input[type="month"]:-moz-placeholder,
+  input[type="time"]:-moz-placeholder,
+  input[type="week"]:-moz-placeholder,
+  input[type="number"]:-moz-placeholder,
+  input[type="email"]:-moz-placeholder,
+  input[type="url"]:-moz-placeholder,
+  input[type="search"]:-moz-placeholder,
+  input[type="tel"]:-moz-placeholder,
+  input[type="color"]:-moz-placeholder,
+  select:-moz-placeholder,
+  textarea:-moz-placeholder,
+  .field:-moz-placeholder {
+    /* Firefox 18- */
+    color: #323944; }
+  input[type="text"]::-moz-placeholder,
+  input[type="password"]::-moz-placeholder,
+  input[type="datetime"]::-moz-placeholder,
+  input[type="datetime-local"]::-moz-placeholder,
+  input[type="date"]::-moz-placeholder,
+  input[type="month"]::-moz-placeholder,
+  input[type="time"]::-moz-placeholder,
+  input[type="week"]::-moz-placeholder,
+  input[type="number"]::-moz-placeholder,
+  input[type="email"]::-moz-placeholder,
+  input[type="url"]::-moz-placeholder,
+  input[type="search"]::-moz-placeholder,
+  input[type="tel"]::-moz-placeholder,
+  input[type="color"]::-moz-placeholder,
+  select::-moz-placeholder,
+  textarea::-moz-placeholder,
+  .field::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #323944; }
+  input[type="text"]:-ms-input-placeholder,
+  input[type="password"]:-ms-input-placeholder,
+  input[type="datetime"]:-ms-input-placeholder,
+  input[type="datetime-local"]:-ms-input-placeholder,
+  input[type="date"]:-ms-input-placeholder,
+  input[type="month"]:-ms-input-placeholder,
+  input[type="time"]:-ms-input-placeholder,
+  input[type="week"]:-ms-input-placeholder,
+  input[type="number"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  input[type="url"]:-ms-input-placeholder,
+  input[type="search"]:-ms-input-placeholder,
+  input[type="tel"]:-ms-input-placeholder,
+  input[type="color"]:-ms-input-placeholder,
+  select:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  .field:-ms-input-placeholder {
+    color: #323944; }
 
 input[type="password"] {
   letter-spacing: 0.3em; }
@@ -1082,22 +1156,43 @@ a, a:visited {
     */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-button a, button a:visited {
-  color: #fff;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  /* on hover */
-  /* on click */
-  /* mobile tap color */ }
-  button a:hover, button a:focus, button a:visited:hover, button a:visited:focus {
+button,
+.button {
+  margin: 1em 0;
+  border: 1px solid #eaedf2;
+  background-color: #eaedf2;
+  color: #323944;
+  padding: 1em;
+  transition: all 0.3s ease; }
+  button:hover,
+  .button:hover {
+    border: 1px solid #FEBE10;
+    background-color: #FEBE10;
     color: #fff; }
-  button a:link, button a:visited:link {
-    /*
+  button a,
+  button a:visited,
+  .button a, .button a:visited {
+    color: #323944;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    /* on hover */
+    /* on click */
+    /* mobile tap color */ }
+    button a:hover,
+    button a:focus,
+    button a:visited:hover,
+    button a:visited:focus,
+    .button a:hover, .button a:focus, .button a:visited:hover, .button a:visited:focus {
+      color: #fff; }
+    button a:link,
+    button a:visited:link,
+    .button a:link, .button a:visited:link {
+      /*
       this highlights links on iPhones/iPads.
       so it basically works like the :hover selector
       for mobile devices.
       */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -1716,15 +1811,7 @@ POSTS & CONTENT STYLES
   margin-left: auto;
   margin-right: auto; }
   .controls button {
-    background-color: #eaedf2;
-    color: #323944;
-    transition: all 0.3s ease;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 1em;
-    margin: 0 0 0 0; }
-    .controls button:hover {
-      background-color: #f8f9fa; }
+    padding: 12px; }
   .controls:after {
     content: " ";
     display: block;
@@ -1767,13 +1854,6 @@ POSTS & CONTENT STYLES
     color: red; }
   .page-template-page-t-programs .controls .global .reset {
     float: right; }
-
-.button,
-button {
-  margin: 1em 0;
-  border: none;
-  background-color: #FEBE10;
-  padding: 1em; }
 
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {

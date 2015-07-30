@@ -3,34 +3,31 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-  @include container();
+    @include container();
 }
 
 .inner-content, .inner-footer, .inner-header {
-  @include container();
-  overflow: hidden;
+    @include container();
+    overflow: hidden;
 }
 
-.inner-header{
-	@include breakpoint($wrapper-width){
-		overflow: visible;
-	}
+.inner-header {
+    @include breakpoint($wrapper-width) {
+        overflow: visible;
+    }
 }
 
 .main {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .article-footer {
-  overflow: hidden;
+    overflow: hidden;
 }
 
-.content,
-.page-title,
-.inner-header,
-.footer{
-  padding: 0 2%;
-  @include breakpoint($wrapper-width){
-    padding: 0;
-  }
+.content, .page-title, .inner-header, .footer {
+    padding: 0 2%;
+    @include breakpoint($wrapper-width) {
+        padding: 0;
+    }
 }

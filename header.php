@@ -90,7 +90,12 @@
 
 				<?php if ( !is_front_page() ){ ?>
 					<header class="page-title-wrap">
-						<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+						<?php if ( !is_404() ){ ?>
+							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+						<?php } else {
+							echo '<h1 class="page-title" itemprop="headline">(ಠ_ಠ)</h1>';
+							}?>
+						
 					</header>
 				<?php } else{
 					wp_nav_menu(array(

@@ -1,7 +1,7 @@
-
 /*********************
 NAVIGATION STYLES
 *********************/
+
 
 /*
 all navs have a .nav class applied via
@@ -11,36 +11,33 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.hamburger{
-  display: block;
-  position: absolute;
-  right: 2%;
-
-  cursor: pointer;
-  transition: all .3s ease;
-
-  &:hover{
-    color: $yellow;
-  }
-
-  @include breakpoint($wrapper-width){
-    display: none;
-    float: none;
-  }
-
-  .closed{
-    display: inline;
-    &.active{
-      display: none;
+.hamburger {
+    display: block;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 56px .75em 21px 0.75em;
+    line-height: 1;
+    &:hover {
+        color: $yellow;
     }
-  }
-  .open{
-    display: none;
-    &.active{
-      display: inline;
+    @include breakpoint($wrapper-width) {
+        display: none;
+        float: none;
     }
-  }
-
+    .closed {
+        display: inline;
+        &.active {
+            display: none;
+        }
+    }
+    .open {
+        display: none;
+        &.active {
+            display: inline;
+        }
+    }
 }
 
 .nav {
@@ -54,277 +51,157 @@ and more scalable.
     transition: all .3s ease;
     margin-top: 82px;
     line-height: 50px;
-
-    @include breakpoint($wrapper-width){
-      line-height: 120px;
+    @include breakpoint($wrapper-width) {
+        line-height: 120px;
     }
-
-    &.active{
-      max-height: 400px;
+    &.active {
+        max-height: calc(1000px + 16px);
     }
-
     li {
-
-      a {
-        display: block;
-        text-decoration: none;
-        padding: 0 0;
-        height: 100%;
-        color: black;
-        transition: all 0.3s ease;
-
-        /*
-        remember this is for mobile ONLY, so there's no need
-        to even declare hover styles here, you can do it in
-        the style.scss file where it's relevant. We want to
-        keep this file as small as possible!
-        */
-        &:hover, &:focus {
-          background-color: $yellow;
-          color: $white;
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 0 0;
+            height: 100%;
+            color: black;
+            transition: all 0.3s ease;
+            &:hover, &:focus {
+                background-color: $yellow;
+                color: $white;
+            }
         }
-      }
-
-      &:first-child {}
-
-      &:last-child {}
-
-      /*
-      so you really have to rethink your dropdowns for mobile.
-      you don't want to have it expand too much because the
-      screen is so small. How you manage your menu should
-      depend on the project. Here's some great info on it:
-      http://www.alistapart.com/articles/organizing-mobile/
-      */
-      ul.sub-menu,
-      ul.children {
-
-        li {
-
-          a {
-            padding-left: 30px;
-
-            &:hover,
-            &:focus {}
-
-            &:link {}
-
-          }
-
-          &:first-child {}
-
-          &:last-child {}
-
+        ul.sub-menu, ul.children {
+            margin-top: 0;
+            li {
+                a {
+                    padding-left: 30px;
+                }
+            }
         }
-
-      }
-
-    } /* end .menu li */
-
+    }
+    /* end .menu li */
     /* highlight current page */
-    li.current-menu-item,
-    li.current_page_item,
-    li.current_page_ancestor {
-
-      a {}
-
-    }  /* end current highlighters */
-
-
-
-
-
-
-
-
-
-
-
-  @include breakpoint($wrapper-width){
-
-    width: auto;
-    clear: both;
-    float: right;
-    position: relative;
-    text-align: left;
-    border-bottom: 0;
-    margin: 0;
-    padding-left: 2em;
-    line-height: 1;
-
-    li {
-      float: left;
-      position: relative;
-      
-      &:hover > a, &:focus > a {
-          background-color: $yellow;
-          color: $white;
-      }
-
-      a {
-        display: block;
-        text-decoration: none;
-        padding: 56px .75em 21px 0.75em;
-        height: 100%;
-        color: black;
-        transition: all 0.3s ease;
-
-        /*
-        remember this is for mobile ONLY, so there's no need
-        to even declare hover styles here, you can do it in
-        the style.scss file where it's relevant. We want to
-        keep this file as small as possible!
-        */
-        &:hover, &:focus {
-          background-color: $yellow;
-          color: $white;
-        }
-      }
-
-      &:first-child {}
-
-      &:last-child {}
-
-      /*
-      so you really have to rethink your dropdowns for mobile.
-      you don't want to have it expand too much because the
-      screen is so small. How you manage your menu should
-      depend on the project. Here's some great info on it:
-      http://www.alistapart.com/articles/organizing-mobile/
-      */
-      &:hover{
-        ul.sub-menu,
-        ul.children{
-          z-index: 100;
-          opacity: 1;
-        }
-      }
-
-      ul.sub-menu,
-      ul.children {
-        margin-top: 0;
-        width: 250px;
-        position: absolute;
-        left: 0; 
-        line-height: 1.5;
-        background: $white;
-        z-index: -100;
-        opacity: 0;
-        transition: all .3s ease;
-
+    li.current-menu-item, li.current_page_item, li.current_page_ancestor {
+        a {}
+    }
+    /* end current highlighters */
+    @include breakpoint($wrapper-width) {
+        width: auto;
+        clear: both;
+        float: right;
+        position: relative;
+        text-align: left;
+        border-bottom: 0;
+        margin: 0;
+        padding-left: 2em;
+        line-height: 1;
         li {
-
-          float: none;
-
-          &:nth-child(odd){
-            background: $light-gray;
-          }
-
-          a {
-            padding: .75em; 
-
-            &:hover,
-            &:focus {}
-
-            &:link {}
-
-          }
-
-          &:first-child {}
-
-          &:last-child {}
-
+            float: left;
+            position: relative;
+            &:hover > a, &:focus > a {
+                background-color: $yellow;
+                color: $white;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 56px .75em 21px 0.75em;
+                height: 100%;
+                color: black;
+                transition: all 0.3s ease;
+                &:hover, &:focus {
+                    background-color: $yellow;
+                    color: $white;
+                }
+            }
+            &:hover {
+                ul.sub-menu, ul.children {
+                    z-index: 100;
+                    opacity: 1;
+                }
+            }
+            ul.sub-menu, ul.children {
+                margin-top: 0;
+                width: 250px;
+                position: absolute;
+                left: 0;
+                line-height: 1.5;
+                background: $white;
+                z-index: -100;
+                opacity: 0;
+                transition: all .3s ease;
+                li {
+                    float: none;
+                    &:nth-child(odd) {
+                        background: $light-gray;
+                    }
+                    a {
+                        padding: .75em;
+                    }
+                }
+            }
         }
-
-      }
-
-    } /* end .menu li */
-
-    /* highlight current page */
-    li.current-menu-item,
-    li.current_page_item,
-    li.current_page_ancestor {
-
-      > a { 
-        background-color: $yellow;
-        color: $white;
-      }
-
-    }  /* end current highlighters */
-  }
-
-} /* end .nav */
+        /* end .menu li */
+        /* highlight current page */
+        li.current-menu-item, li.current_page_item, li.current_page_ancestor {
+            > a {
+                background-color: $yellow;
+                color: $white;
+            }
+        }
+        /* end current highlighters */
+    }
+}
 
 
-
-
+/* end .nav */
 
 .home-nav {
-  border-bottom: 0;
-  margin: 0;
-  padding-left: 0em;
-
-  @include container($wrapper-width);
-
-  li {
-
-    a {
-      display: block;
-      text-decoration: none;
-      // padding: 0 .25em;
-      height: 100%;
-      color: $white;
-      transition: all 0.3s ease;
-      font-size: 36px;
-      text-align: left;
-      position: relative;
-
-      @include breakpoint(400px){
-        font-size: 48px;
-      } 
-
-      @include breakpoint(480px){
-        font-size: 64px;
-      } 
-
-      @include breakpoint(640px){
-        font-size: 96px;
-      }   
-
-      @include breakpoint(740px){
-        font-size: 108px;
-      }  
-
-      @include breakpoint(860px){
-        font-size: 120px;
-      }  
-
-      @include breakpoint(900px){
-        font-size: 132px;
-      }      
-
-      @include breakpoint(940px){
-        font-size: 144px;
-        left: -12px;
-      }
-      
-      font-weight: bold;
-      border-left: 0em solid transparent;
-
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */
-      &:hover, &:focus {
-        color: $yellow;
-        background: $white;
-        border-left: .2em solid $yellow;
-        padding-left: .2em;
-      }
+    border-bottom: 0;
+    margin: 0;
+    padding-left: 0em;
+    @include container($wrapper-width);
+    li {
+        a {
+            display: block;
+            text-decoration: none;
+            // padding: 0 .25em;
+            height: 100%;
+            color: $white;
+            transition: all 0.3s ease;
+            font-size: 36px;
+            text-align: left;
+            position: relative;
+            @include breakpoint(400px) {
+                font-size: 48px;
+            }
+            @include breakpoint(480px) {
+                font-size: 64px;
+            }
+            @include breakpoint(640px) {
+                font-size: 96px;
+            }
+            @include breakpoint(740px) {
+                font-size: 108px;
+            }
+            @include breakpoint(860px) {
+                font-size: 120px;
+            }
+            @include breakpoint(900px) {
+                font-size: 132px;
+            }
+            @include breakpoint(940px) {
+                font-size: 144px;
+                left: -12px;
+            }
+            font-weight: bold;
+            border-left: 0em solid transparent;
+            &:hover, &:focus {
+                color: $yellow;
+                background: $white;
+                border-left: .2em solid $yellow;
+                padding-left: .2em;
+            }
+        }
     }
-
-  }
-
-} /* end .nav */
+}

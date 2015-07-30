@@ -10,8 +10,6 @@ sidebars, comments, ect.
 
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
-// LOAD TGM Plugin Class
-require_once( 'library/tgm-plugin-activation.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 require_once( 'library/admin.php' );

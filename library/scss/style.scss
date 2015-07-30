@@ -8,22 +8,7 @@ Stylesheet: Main Stylesheet
 
 @import "../../bower_components/susy/sass/susy";
 @import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
-
-$susy: (
-  columns: 12,
-  gutters: (2/3),
-  math: fluid,
-  output: float,
-  gutter-position: after,
-  grid-padding: 2em,
-  debug: (
-    image: hide,
-    color: rgba(#66f, .25),
-    output: background,
-    toggle: overlay,
-  ),
-);
-
+$susy: ( columns: 12, gutters: (2/3), math: fluid, output: float, gutter-position: after, grid-padding: 2em, debug: ( image: hide, color: rgba(#66f, .25), output: background, toggle: overlay, ), );
 $wrapper-width: 940px;
 
 /*********************
@@ -35,19 +20,14 @@ the whole project.
 
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
-
 // Sass variables
 @import "partials/variables";
-
 // typography
 @import "partials/typography";
-
 // Sass functions
 @import "partials/functions";
-
 // import mixins
 @import "partials/mixins";
-
 // the grid
 @import "partials/grid";
 
@@ -58,9 +38,9 @@ We can break them up as much as we want or just keep them all in one.
 I mean, you can do whatever you want. The world is your oyster. Unless
 you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
+
 // buttons
 @import "modules/buttons";
-
 // forms (inputs & labels)
 @import "modules/forms";
 
@@ -73,7 +53,6 @@ need to have all the breakpoint files.
 *********************/
 
 @import "chunks/general";
-@import "chunks/wp-body-classes";
 @import "chunks/layout";
 @import "chunks/links";
 @import "chunks/headings";
@@ -94,9 +73,8 @@ Feel free to customize this. Remember to add things that won't make
 sense to print at the bottom. Things like nav, ads, and forms should
 be set to display none.
 *********************/
+
 @media print {
-
-	// styles in print.scss
-	@import "partials/print";
-
+    // styles in print.scss
+    @import "partials/print";
 }

@@ -1040,6 +1040,10 @@ LAYOUT & GRID STYLES
     display: block;
     clear: both; }
 
+@media (min-width: 940px) {
+  .inner-header {
+    overflow: visible; } }
+
 .main {
   overflow: hidden; }
 
@@ -1288,11 +1292,13 @@ and more scalable.
       border-bottom: 0;
       margin: 0;
       padding-left: 2em;
+      line-height: 1;
       /* end .menu li */
       /* highlight current page */
       /* end current highlighters */ }
       .nav li {
         float: left;
+        position: relative;
         /*
       so you really have to rethink your dropdowns for mobile.
       you don't want to have it expand too much because the
@@ -1300,10 +1306,13 @@ and more scalable.
       depend on the project. Here's some great info on it:
       http://www.alistapart.com/articles/organizing-mobile/
       */ }
+        .nav li:hover > a, .nav li:focus > a {
+          background-color: #FEBE10;
+          color: #fff; }
         .nav li a {
           display: block;
           text-decoration: none;
-          padding: 0 0.75em;
+          padding: 56px 0.75em 21px 0.75em;
           height: 100%;
           color: black;
           transition: all 0.3s ease;
@@ -1316,9 +1325,35 @@ and more scalable.
           .nav li a:hover, .nav li a:focus {
             background-color: #FEBE10;
             color: #fff; }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 30px; } }
+        .nav li:hover ul.sub-menu,
+        .nav li:hover ul.children {
+          z-index: 100;
+          opacity: 1; }
+        .nav li ul.sub-menu,
+        .nav li ul.children {
+          margin-top: 0;
+          width: 250px;
+          position: absolute;
+          left: 0;
+          line-height: 1.5;
+          background: #fff;
+          z-index: -100;
+          opacity: 0;
+          transition: all 0.3s ease; }
+          .nav li ul.sub-menu li,
+          .nav li ul.children li {
+            float: none; }
+            .nav li ul.sub-menu li:nth-child(odd),
+            .nav li ul.children li:nth-child(odd) {
+              background: #f8f9fa; }
+            .nav li ul.sub-menu li a,
+            .nav li ul.children li a {
+              padding: .75em; }
+      .nav li.current-menu-item > a,
+      .nav li.current_page_item > a,
+      .nav li.current_page_ancestor > a {
+        background-color: #FEBE10;
+        color: #fff; } }
 
 /* end .nav */
 .home-nav {

@@ -11,6 +11,12 @@ LAYOUT & GRID STYLES
   overflow: hidden;
 }
 
+.inner-header{
+	@include breakpoint($wrapper-width){
+		overflow: visible;
+	}
+}
+
 .main {
   overflow: hidden;
 }

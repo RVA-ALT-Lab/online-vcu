@@ -71,7 +71,6 @@ and more scalable.
         padding: 0 0;
         height: 100%;
         color: black;
-
         transition: all 0.3s ease;
 
         /*
@@ -147,22 +146,27 @@ and more scalable.
     clear: both;
     float: right;
     position: relative;
-    // top: -59px;
     text-align: left;
     border-bottom: 0;
     margin: 0;
     padding-left: 2em;
+    line-height: 1;
 
     li {
       float: left;
+      position: relative;
+      
+      &:hover > a, &:focus > a {
+          background-color: $yellow;
+          color: $white;
+      }
 
       a {
         display: block;
         text-decoration: none;
-        padding: 0 .75em;
+        padding: 56px .75em 21px 0.75em;
         height: 100%;
         color: black;
-
         transition: all 0.3s ease;
 
         /*
@@ -188,13 +192,36 @@ and more scalable.
       depend on the project. Here's some great info on it:
       http://www.alistapart.com/articles/organizing-mobile/
       */
+      &:hover{
+        ul.sub-menu,
+        ul.children{
+          z-index: 100;
+          opacity: 1;
+        }
+      }
+
       ul.sub-menu,
       ul.children {
+        margin-top: 0;
+        width: 250px;
+        position: absolute;
+        left: 0; 
+        line-height: 1.5;
+        background: $white;
+        z-index: -100;
+        opacity: 0;
+        transition: all .3s ease;
 
         li {
 
+          float: none;
+
+          &:nth-child(odd){
+            background: $light-gray;
+          }
+
           a {
-            padding-left: 30px;
+            padding: .75em; 
 
             &:hover,
             &:focus {}
@@ -218,7 +245,10 @@ and more scalable.
     li.current_page_item,
     li.current_page_ancestor {
 
-      a {}
+      > a { 
+        background-color: $yellow;
+        color: $white;
+      }
 
     }  /* end current highlighters */
   }

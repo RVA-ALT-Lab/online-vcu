@@ -124,7 +124,7 @@
         </div>
       </div>
 
-		<div class="course-table-row" 
+		<div class="course-table-row fade" 
 			ng-click="showme = !showme"
 			
 			dir-paginate='

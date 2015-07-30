@@ -958,7 +958,7 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
-.gform_wrapper .ginput_complex label {
+.gform_body .gform_wrapper .ginput_complex label {
   display: none; }
 
 /*********************
@@ -1592,6 +1592,8 @@ POSTS & CONTENT STYLES
 .course-table-headers,
 .course-table-row {
   cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -1666,6 +1668,11 @@ POSTS & CONTENT STYLES
         float: right;
         margin-right: 0; } }
 
+.course-table-headers {
+  background-color: #f8f9fa; }
+  .course-table-headers:hover {
+    background-color: #f8f9fa; }
+
 .controls {
   margin: 2em 0;
   border: 1px solid #f8f9fa;
@@ -1732,6 +1739,23 @@ button {
   border: none;
   background-color: #FEBE10;
   padding: 1em; }
+
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition: 0.3s linear all;
+  opacity: 0; }
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+/* now the element will fade out before it is removed from the DOM */
+.fade.ng-leave {
+  transition: 0.3s linear all;
+  opacity: 1; }
+
+.fade.ng-leave.ng-leave-active {
+  opacity: 0; }
 
 article.program {
   max-width: 940px;

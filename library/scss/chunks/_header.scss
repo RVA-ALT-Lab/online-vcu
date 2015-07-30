@@ -53,6 +53,7 @@ HEADER STYLES
         transition: all .3s ease;
         position: relative;
         top: -3px;
+        display: block;
         &:hover, &:focus {
             color: $yellow;
         }

@@ -5,7 +5,10 @@ HEADER STYLES
 .header {
     text-transform: uppercase;
     position: relative;
-    // overflow: hidden;
+    
+background-image: url(https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg);
+background-size: cover;
+
     .inner-header {
         background: $white;
         line-height: 120px;

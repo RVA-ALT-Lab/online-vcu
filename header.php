@@ -96,7 +96,7 @@
 						} elseif ( is_search() ){
 							echo '<h1 class="page-title" itemprop="headline">Search</h1>';
 						} else {
-							echo '<h1 class="page-title" itemprop="headline">'. the_title() .'</h1>';
+							echo '<h1 class="page-title" itemprop="headline">'. get_the_title() .'</h1>';
 						}?>
 						
 					</header>
@@ -116,8 +116,11 @@
 						));
 					} ?>
 
+
+<?php if ( is_front_page() ){ ?>
 <video autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
 	<source src="<?php echo get_template_directory_uri(); ?>/library/videos/montage4mark.webm" type="video/webm">
 </video>
+<?php } ?>
 
 			</header>

@@ -15,6 +15,7 @@
     }
     .header {
         display: none;
+        background: none;
         @include breakpoint(650px) {
             display: block;
         }
@@ -50,11 +51,28 @@
         }
     }
     .mode {
+        &.header{
+            &:hover{
+                color: $black;
+            }
+        }
         margin-bottom: 1em;
         @include breakpoint(650px) {
             margin-bottom: 0;
             @include span( last 2 of 12);
+        
+            transition: all .3s ease;
+
+            &:hover{
+                color: $yellow;
+
+                .popup{
+                    color: $black;
+                }
+            }
+
         }
+
     }
 }
 

@@ -72,9 +72,12 @@ and more scalable.
         }
         ul.sub-menu, ul.children {
             margin-top: 0;
+            line-height: 1.5;
+            margin-bottom: 0;
             li {
                 a {
                     padding-left: 30px;
+                    margin-right: 30px;
                 }
             }
         }
@@ -137,6 +140,7 @@ and more scalable.
                     }
                     a {
                         padding: .75em;
+                        margin-right: 0;
                     }
                 }
             }

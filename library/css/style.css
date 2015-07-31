@@ -1412,6 +1412,8 @@ HEADER STYLES
 .header {
 	text-transform: uppercase;
 	position: relative;
+	background-image: url(https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg);
+	background-size: cover;
 }
 
 .header .inner-header {
@@ -1581,11 +1583,14 @@ and more scalable.
 .nav li ul.sub-menu,
 .nav li ul.children {
 	margin-top: 0;
+	line-height: 1.5;
+	margin-bottom: 0;
 }
 
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
 	padding-left: 30px;
+	margin-right: 30px;
 }
 
 /* end .nav */
@@ -1916,6 +1921,7 @@ POSTS & CONTENT STYLES
 .course-table-headers .header,
 .course-table-row .header {
 	display: none;
+	background: none;
 }
 
 .course-table-headers .course,
@@ -1957,6 +1963,11 @@ POSTS & CONTENT STYLES
 .course-table-headers .mode,
 .course-table-row .mode {
 	margin-bottom: 1em;
+}
+
+.course-table-headers .mode.header:hover,
+.course-table-row .mode.header:hover {
+	color: #323944;
 }
 
 .course-table-headers {
@@ -2417,6 +2428,18 @@ be set to display none.
 	width: 13.7931034483%;
 	float: right;
 	margin-right: 0;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.course-table-headers .mode:hover,
+.course-table-row .mode:hover {
+	color: #FEBE10;
+}
+
+.course-table-headers .mode:hover .popup,
+.course-table-row .mode:hover .popup {
+	color: #323944;
 }
 
 .controls .filters select {
@@ -2574,6 +2597,7 @@ article.program .program-details {
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
 	padding: .75em;
+	margin-right: 0;
 }
 
 .nav li.current-menu-item > a,

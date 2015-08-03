@@ -21,14 +21,25 @@ the_content();
 
 
 $content = get_field('content');
-	
+
 if ( $content ){
 
 	foreach( $content as $content ){
+
 		
 		foreach( $content as $row ){
 			$columns = count( $row );
-			echo "<div class='row row{$columns}'>";
+			$large = "";
+			if ( $columns == 1 ){
+				foreach($row as $column){
+
+					if( $column['large'] ){
+						$large = "large";
+					}
+				}
+			}
+			
+			echo "<div class='row row{$columns} {$large}'>";
 				
 				foreach($row as $column){
 					echo "<div class='column'>";

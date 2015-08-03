@@ -201,6 +201,15 @@ POSTS & CONTENT STYLES
             @include span( 12 of 12);
         }
     }
+
+    &.large{
+        @include breakpoint(650px) {
+            @include span( 10 of 12);
+            .column {
+                @include span( 12 of 12);
+            }
+        }
+    }
 }
 
 .row2 {
@@ -208,6 +217,15 @@ POSTS & CONTENT STYLES
         @include span( 12 of 12);
         .column {
             @include gallery( 6 of 12);
+        }
+    }
+}
+
+.row3 {
+    @include breakpoint(650px) {
+        @include span( 12 of 12);
+        .column {
+            @include gallery( 4 of 12);
         }
     }
 }

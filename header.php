@@ -92,7 +92,7 @@
 					<header class="page-title-wrap">
 						<?php 
 						if ( is_404() ){
-							echo '<h1 class="page-title" itemprop="headline">(ಠ_ಠ)</h1>';
+							echo '<h1 class="page-title" itemprop="headline" style="text-align:center">(ಠ_ಠ)</h1>';
 						} elseif ( is_search() ){
 							echo '<h1 class="page-title" itemprop="headline">Search</h1>';
 						} else {

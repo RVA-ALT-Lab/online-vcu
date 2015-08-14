@@ -1417,12 +1417,22 @@ POSTS & CONTENT STYLES
     .course-table-headers .details .full-description, .course-table-row .details .full-description {
       margin: 1em 0;
       height: auto;
-      opacity: 0; }
+      opacity: 1; }
       .course-table-headers .details .full-description.ng-hide-add.ng-hide-add-active, .course-table-headers .details .full-description.ng-hide-remove.ng-hide-remove-active, .course-table-row .details .full-description.ng-hide-add.ng-hide-add-active, .course-table-row .details .full-description.ng-hide-remove.ng-hide-remove-active {
         -webkit-transition: all linear 0.3s;
         transition: all linear 0.3s; }
       .course-table-headers .details .full-description.ng-hide, .course-table-row .details .full-description.ng-hide {
         opacity: 0; }
+      .course-table-headers .details .full-description button, .course-table-row .details .full-description button {
+        border: 1px solid #323944;
+        background-color: #fff;
+        display: block;
+        padding: 0 0 0 0; }
+        .course-table-headers .details .full-description button:hover, .course-table-row .details .full-description button:hover {
+          background-color: #FEBE10; }
+        .course-table-headers .details .full-description button a, .course-table-row .details .full-description button a {
+          display: inline-block;
+          padding: 1em; }
   .course-table-headers .mode, .course-table-row .mode {
     margin-bottom: 1em; }
     .course-table-headers .mode.header:hover, .course-table-row .mode.header:hover {

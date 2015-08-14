@@ -154,9 +154,8 @@
 				Course: <span class="course-subject {{filter}}">{{data.subject}}</span> <span class="course-number {{filter}}">{{data.course_number}}</span>-<span class="course-section {{filter}}">{{data.section}}</span>
 
 				<div class="full-description" ng-show="showme">
-					Semester course; 3 lecture hours. 3 credits. Introduces students to the interdisciplinary processes whereby those working in the field develop their arguments and interpretations concerning the black experience. Students will develop increased skills in library research and an awareness of the importance of such methodologies as archaeology, oral history, case studies, participant observations, experiments and surveys. Students will be introduced to the need for critical analysis, the role of biases and frames of references and the reason why scholars working in the field often reach different conclusions with reference to issues of fact, interpretation and significance.
-
-					<button><a href="http://google.com">HOW TO REGISTER</a></button>
+					{{data.course_desc}}
+					<button><a href="<?php echo home_url(); ?>/how-to-apply/">HOW TO REGISTER</a></button>
 				</div>
 			</div>	
 

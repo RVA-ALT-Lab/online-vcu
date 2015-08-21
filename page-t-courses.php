@@ -144,7 +144,7 @@
 			<div class="course" ng-cloak>
 				<span class="course-title {{filter}}">{{data.title}}</span><br/>
 				<span class="course-instructor {{filter}}">{{data.instructor}}</span><br/>
-				<span class="course-term {{filter}}">{{data.term}}</span> from {{ dateFormat(data.start) | date:'MMM d'}} to {{ dateFormat(data.end) | date:'MMM d'}}		
+				<span class="course-term {{filter}}">{{data.term}}</span> from {{ data.start.slice(0,-11) }} to {{ data.end.slice(0,-11) }}		
 			</div>		
 
 			<div class="details" ng-cloak>

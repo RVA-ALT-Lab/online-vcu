@@ -129,7 +129,7 @@
 			
 			dir-paginate="
 					data in data | 
-					orderBy: 'subject' |
+					orderBy: ['subject','course_number'] |
 					filter:search | 
 					filter:filterCollege.college |
 					filter:filterMode.mode |

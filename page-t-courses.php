@@ -127,16 +127,16 @@
 		<div class="course-table-row fade" 
 			ng-click="showme = !showme"
 			
-			dir-paginate='
+			dir-paginate="
 					data in data | 
-					orderBy: filter : false |
+					orderBy: 'subject' |
 					filter:search | 
 					filter:filterCollege.college |
 					filter:filterMode.mode |
 					filter:filterDept.dept |
 					filter:filterTerm.term |
 					itemsPerPage: 10 
-				'
+				"
 			>
 
 			
@@ -144,7 +144,7 @@
 			<div class="course" ng-cloak>
 				<span class="course-title {{filter}}">{{data.title}}</span><br/>
 				<span class="course-instructor {{filter}}">{{data.instructor}}</span><br/>
-				<span class="course-term {{filter}}">{{data.term}}</span> from {{ data.start.slice(0,-11) }} to {{ data.end.slice(0,-11) }}		
+				<span class="course-term {{filter}}">{{data.term}}</span> from {{ data.start.slice(0,-11) }} to {{ data.end.slice(0,-11) }}			
 			</div>		
 
 			<div class="details" ng-cloak>

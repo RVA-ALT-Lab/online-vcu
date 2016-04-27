@@ -100,14 +100,14 @@
 		<div ng-cloak class="course-table-row" 
 			ng-click="showme = !showme"
 			
-			ng-repeat='
+			ng-repeat="
 					data in data | 
-					orderBy: filter : false |
 					filter:search | 
 					filter:filterDegree.degree |
 					filter:filterDepartment.department |
-					filter:filterMode.mode
-				'
+					filter:filterMode.mode |
+					orderBy: 'title'
+				"
 			>
 			<a class="program-link cf" href="{{data.link}}" ng-cloak>
 

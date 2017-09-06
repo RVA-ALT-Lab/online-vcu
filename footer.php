@@ -1,8 +1,8 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer class="footer" aria-label="main-footer" itemscope itemtype="http://schema.org/WPFooter">
 
 				<div class="inner-footer">
 
-					<nav role="navigation">
+					<nav aria-label="footer-navigation">
 						<?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
     					'container_class' => 'footer-links',         // class of container (should you choose to use it)
@@ -29,7 +29,7 @@
           			</div>
 
           			<div class="full-logo">
-          				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-full.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-full.jpg'"></a>
+          				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-full.svg" alt="Online @ VCU brand logo in color" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-full.jpg'"></a>
           			</div>
 				</div>
 

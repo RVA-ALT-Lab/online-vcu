@@ -46,8 +46,8 @@
 <div class="vcubar-topbar dark">
     <div class="inner-vcubar">
       <a href="http://vcu.edu" target="_blank" class="vcu">
-        <img class="monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/vcu-dk.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/vcu-dk.jpg'">
-        <img class="color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/vcu-dk-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/vcu-dk-hover.jpg'">
+        <img class="monotone" alt="VCU brand logo in monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/vcu-dk.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/vcu-dk.jpg'">
+        <img class="color" alt="VCU brand logo in color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/vcu-dk-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/vcu-dk-hover.jpg'">
       </a>
     </div>
 </div>
@@ -59,10 +59,10 @@
 				<div class="inner-header">
 					<div class="inner-header-wrap">
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
+						<p id="logo" class="h1" role="heading" aria-level="1" itemscope itemtype="http://schema.org/Organization">
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-        <img class="monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz.jpg'">
-        <img class="color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz-hover.jpg'">
+        <img class="monotone" alt="Online @ VCU brand logo in monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz.jpg'">
+        <img class="color" alt="Online @ VCU brand logo in color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz-hover.jpg'">
         					</a>
         				</p>
 
@@ -70,7 +70,7 @@
 						<?php // bloginfo('description'); ?>
 
 						<div class="hamburger"><span class="closed">&#9776;</span><span class="open">&#10005;</span> MENU</div>
-						<nav class="cf" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<nav class="cf" aria-label="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(
 	    					'container' => false,                           // remove nav container
 	    					'container_class' => 'menu',                 // class of container (should you choose to use it)

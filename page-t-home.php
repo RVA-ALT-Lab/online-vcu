@@ -6,20 +6,20 @@
 
 				<div class="inner-content">
 
-					<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main class="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
-								<section class="entry-content" itemprop="articleBody">
+								<div class="entry-content" aria-label="article-body" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
 									?>
-								</section> <?php // end article section ?>
+								</div> <?php // end article section ?>
 
-								<footer class="article-footer">
+								<footer class="article-footer" aria-label="article-footer">
 
 								</footer>
 								<?php // comments_template(); ?>

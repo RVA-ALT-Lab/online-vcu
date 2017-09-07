@@ -860,6 +860,9 @@ button, .button {
       */
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+footer .info a {
+  text-decoration: underline; }
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -1688,7 +1691,7 @@ PAGE NAVI STYLES
     display: block;
     color: #323944; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #FEBE10;
+      background-color: #000000;
       color: #fff; }
   .pagination .current {
     cursor: default;

@@ -26,7 +26,7 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 
-								<section class="entry-content" itemprop="articleBody">
+								<div aria-label="article-body" class="entry-content" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -44,7 +44,7 @@
 		<div class="controls">
 
 			<div class="filters">
-				<select class="filter-department" ng-model="filterDepartment" 
+				<select aria-label="Select box to filter list by department" class="filter-department" ng-model="filterDepartment" 
 						ng-options="
 						data.department for data in data | 
 						orderBy: 'department' |
@@ -53,7 +53,7 @@
 				    <option value="">All Colleges</option>
 				</select>
 
-				<select class="filter-degree" ng-model="filterDegree" 
+				<select aria-label="Select box to filter list by degree type" class="filter-degree" ng-model="filterDegree" 
 						ng-options="
 						data.degree for data in data | 
 						orderBy: 'degree' |
@@ -62,7 +62,7 @@
 				    <option value=""> All Degrees</option>
 				</select>
 
-				<select class="filter-mode" ng-model="filterMode" 
+				<select aria-label="Select box to filter list by delivery mode" class="filter-mode" ng-model="filterMode" 
 						ng-options="
 						data.mode for data in data | 
 						unique:'mode' ">
@@ -73,7 +73,7 @@
 
 
 			<div class="global">
-				<input class="search" type="search" ng-model='search.$' placeholder='search'>
+				<input aria-label="Search box to filter list by text" class="search" type="search" ng-model='search.$' placeholder='search'>
 				
 				<button class="reset" ng-click="
 						search.$='';
@@ -135,7 +135,7 @@
 								</section>
 
 
-								<footer class="article-footer">
+								<footer class="article-footer" aria-label="article-footer">
 
                   <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 

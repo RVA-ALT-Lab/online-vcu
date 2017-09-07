@@ -54,7 +54,7 @@
 
 		<div class="container">
 
-			<header class="header clearfix" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header clearfix" role="banner" aria-label="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div class="inner-header">
 					<div class="inner-header-wrap">
@@ -89,7 +89,7 @@
 				</div>
 
 				<?php if ( !is_front_page() ){ ?>
-					<header class="page-title-wrap">
+					<header class="page-title-wrap" aria-label="page-title">
 						<?php 
 						if ( is_404() ){
 							echo '<h1 class="page-title" itemprop="headline" style="text-align:center">(ಠ_ಠ)</h1>';

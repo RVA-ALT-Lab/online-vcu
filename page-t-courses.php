@@ -19,14 +19,14 @@
 
 				<div class="inner-content">
 
-					<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main class="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
 
-								<section class="entry-content" itemprop="articleBody">
+								<div aria-label="article-body" class="entry-content" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -46,7 +46,7 @@
 		<div class="controls">
 
 			<div class="filters">
-				<select class="filter-college" ng-model="filterCollege" 
+				<select aria-label="Select box to filter list by college" class="filter-college" ng-model="filterCollege" 
 						ng-options="
 						data.college for data in data | 
 						orderBy: 'college' |
@@ -55,14 +55,14 @@
 				    <option value="">All Colleges</option>
 				</select>
 
-				<select class="filter-term" ng-model="filterTerm" 
+				<select aria-label="Select box to filter list by term" class="filter-term" ng-model="filterTerm" 
 						ng-options="
 						data.term for data in data | 
 						unique:'term' ">
 				    <option value=""> All Terms</option>
 				</select>
 
-				<select class="filter-dept" ng-model="filterDept" 
+				<select aria-label="Select box to filter list by degree" class="filter-dept" ng-model="filterDept" 
 						ng-options="
 						data.dept for data in data | 
 						orderBy: 'dept' |
@@ -71,7 +71,7 @@
 				    <option value=""> All Departments</option>
 				</select>
 
-				<select class="filter-mode" ng-model="filterMode" 
+				<select aria-label="Select box to filter list by delivery mode" class="filter-mode" ng-model="filterMode" 
 						ng-options="
 						data.mode for data in data | 
 						unique:'mode' ">
@@ -82,7 +82,7 @@
 
 
 			<div class="global">
-				<input class="search" type="search" ng-model='search.$' placeholder='search'>
+				<input aria-label="Search box to filter list by text" class="search" type="search" ng-model='search.$' placeholder='search'>
 				
 				<button class="reset" ng-click="
 						search.$='';
@@ -182,7 +182,7 @@
 								</section>
 
 
-								<footer class="article-footer">
+								<footer class="article-footer" aria-label="article-footer">
 
                   <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 

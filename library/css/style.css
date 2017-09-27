@@ -816,14 +816,13 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  text-decoration: none;
   transition: all .3s ease;
-  color: #FEBE10;
+  color: #2980b9;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #323944; }
+    color: #216A9A; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.

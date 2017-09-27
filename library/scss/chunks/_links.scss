@@ -3,7 +3,6 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-    text-decoration: none;
     transition: all .3s ease;
     color: $link-color;
     /* on hover */
@@ -58,5 +57,5 @@ button, .button {
 }
 
 footer .info a {
-    text-decoration: underline; 
+    text-decoration: underline;
 }

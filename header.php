@@ -42,6 +42,23 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
+<style>
+	#skip-to-content {
+		position: fixed;
+		z-index: 1000;
+		top: -50px;
+		left: 0;
+		width: 100%;
+		height:35px;
+		text-align:center;
+		font-size: 1.5em;
+		background-color:white;
+	}
+	#skip-to-content:focus {
+		top: 0;
+	}
+</style>
+<a id="skip-to-content" href="#main">Skip to Content</a>
 <style>.vcubar-topbar.light{background:#fff;border-top:3px solid #aab2b1;border-bottom:3px solid #aab2b1}.vcubar-topbar.dark{background:#000;border-top:3px solid #000;border-bottom:3px solid #000}.vcubar-topbar .inner-vcubar{max-width:100%;margin-left:auto;margin-right:auto;height:24px;position:relative}.vcubar-topbar .inner-vcubar:after{content:" ";display:block;clear:both}.vcubar-topbar a{display:block;height:32px;position:absolute;top:50%}.vcubar-topbar a.vcu{width:391px;height:20px;left:20px;margin-top:-10px}.vcubar-topbar a.vcu img{width:391px;height:20px}.vcubar-topbar a.vcu:hover .monotone{opacity:0;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0)}.vcubar-topbar a.vcu:hover .color{opacity:1;-ms-filter:"alpha(Opacity=100)";filter:alpha(opacity=100)}.vcubar-topbar a.vcuarts{width:96px;height:20px;right:20px;margin-top:-12px}.vcubar-topbar a.vcuarts:hover .monotone{opacity:0;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0)}.vcubar-topbar a.vcuarts:hover .color{opacity:1;-ms-filter:"alpha(Opacity=100)";filter:alpha(opacity=100)}.vcubar-topbar a img{position:absolute;border:0}.vcubar-topbar a .color{opacity:0;-webkit-transition:opacity .15s ease-in-out;transition:opacity .15s ease-in-out;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0)}.vcubar-topbar a .monotone{-webkit-transition:opacity .15s ease-in-out;transition:opacity .15s ease-in-out}@media (max-width:768px){.vcubar-topbar a.vcu{width:70px;overflow:hidden}}</style>
 <div class="vcubar-topbar dark">
     <div class="inner-vcubar">
@@ -90,7 +107,7 @@
 
 				<?php if ( !is_front_page() ){ ?>
 					<header class="page-title-wrap" aria-label="page-title">
-						<?php 
+						<?php
 						if ( is_404() ){
 							echo '<h1 class="page-title" itemprop="headline" style="text-align:center">(ಠ_ಠ)</h1>';
 						} elseif ( is_search() ){
@@ -98,7 +115,7 @@
 						} else {
 							echo '<h1 class="page-title" itemprop="headline">'. get_the_title() .'</h1>';
 						}?>
-						
+
 					</header>
 				<?php } else{
 					wp_nav_menu(array(
@@ -118,7 +135,7 @@
 
 
 <?php if ( is_front_page() ){ ?>
-<video autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
+<video aria-hidden="true" autoplay loop poster="https://farm8.staticflickr.com/7422/10885973016_2c86d90f36_b.jpg" id="bgvid">
 	<source src="<?php echo get_template_directory_uri(); ?>/library/videos/montage4mark.webm" type="video/webm">
 </video>
 <?php } ?>

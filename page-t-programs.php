@@ -19,11 +19,11 @@
 
 				<div class="inner-content">
 
-					<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main"  class="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
 
 								<div aria-label="article-body" class="entry-content" itemprop="articleBody">
@@ -39,50 +39,50 @@
 
 
 <div ng-app="benson">
-  <div ng-controller="MainController">	
-			
+  <div ng-controller="MainController">
+
 		<div class="controls">
 
 			<div class="filters">
-				<select aria-label="Select box to filter list by department" class="filter-department" ng-model="filterDepartment" 
+				<select aria-label="Select box to filter list by department" class="filter-department" ng-model="filterDepartment"
 						ng-options="
-						data.department for data in data | 
+						data.department for data in data |
 						orderBy: 'department' |
 						filter:filterDept.dept |
 						unique:'department'">
 				    <option value="">All Colleges</option>
 				</select>
 
-				<select aria-label="Select box to filter list by degree type" class="filter-degree" ng-model="filterDegree" 
+				<select aria-label="Select box to filter list by degree type" class="filter-degree" ng-model="filterDegree"
 						ng-options="
-						data.degree for data in data | 
+						data.degree for data in data |
 						orderBy: 'degree' |
 						filter:filterCollege.college |
 						unique:'degree'">
 				    <option value=""> All Degrees</option>
 				</select>
 
-				<select aria-label="Select box to filter list by delivery mode" class="filter-mode" ng-model="filterMode" 
+				<select aria-label="Select box to filter list by delivery mode" class="filter-mode" ng-model="filterMode"
 						ng-options="
-						data.mode for data in data | 
+						data.mode for data in data |
 						unique:'mode' ">
 				    <option value=""> All Modes</option>
 				</select>
-			
+
 			</div>
 
 
 			<div class="global">
 				<input aria-label="Search box to filter list by text" class="search" type="search" ng-model='search.$' placeholder='search'>
-				
+
 				<button class="reset" ng-click="
 						search.$='';
-						filterMode=''; 
+						filterMode='';
 						filterDepartment='';
 						filterDegree='';">Reset All</button>
 			</div>
 		</div>
-		
+
 		<div class="course-table-headers">
 			<div class="course header"><strong>Program</strong></div>
 			<div class="details header"><strong>School</strong></div>
@@ -97,12 +97,12 @@
         </div>
       </div>
 
-		<div ng-cloak class="course-table-row" 
+		<div ng-cloak class="course-table-row"
 			ng-click="showme = !showme"
-			
+
 			ng-repeat="
-					data in data | 
-					filter:search | 
+					data in data |
+					filter:search |
 					filter:filterDegree.degree |
 					filter:filterDepartment.department |
 					filter:filterMode.mode |
@@ -114,11 +114,11 @@
 				<div class="course">
 					<span class="course-title {{filter}}" ng-cloak >{{data.title}}</span><br/>
 					<span class="course-subject {{filter}}" ng-cloak >{{data.meta.subject}}</span><br/>
-				</div>		
+				</div>
 
 				<div class="details">
 					<span class="course-college {{filter}}" ng-cloak >{{data.meta.department}}</span><br/>
-				</div>	
+				</div>
 
 				<div class="mode">
 					<span class="course-mode {{filter}}" ng-cloak >{{data.mode}}</span>

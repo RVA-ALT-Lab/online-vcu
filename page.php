@@ -4,15 +4,15 @@
 
 				<div class="inner-content">
 
-					<main class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<section class="entry-content" itemprop="articleBody">
-									
-	
+
+
 <?php
 
 the_content();
@@ -26,7 +26,7 @@ if ( $content ){
 
 	foreach( $content as $content ){
 
-		
+
 		foreach( $content as $row ){
 			$columns = count( $row );
 			$large = "";
@@ -38,9 +38,9 @@ if ( $content ){
 					}
 				}
 			}
-			
+
 			echo "<div class='row row{$columns} {$large}'>";
-				
+
 				foreach($row as $column){
 					echo "<div class='column'>";
 						echo $column['columns'];

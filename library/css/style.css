@@ -817,12 +817,12 @@ LINK STYLES
 *********************/
 a, a:visited {
   transition: all .3s ease;
-  color: #2980b9;
+  color: #0000ff;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #216A9A; }
+    color: #0000c1; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.

@@ -2,7 +2,7 @@
 
 				<div class="inner-footer">
 
-				
+
 				<!-- Comment out nav footer here for accessibility reasons  -->
 				<!-- 	<nav aria-label="footer-navigation"> -->
 						<?php wp_nav_menu(array(
@@ -19,9 +19,9 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 				<!-- 	</nav> -->
-					
+
 					<div class="info">
-						<p>1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu">online@vcu.edu</a></p>
+						<p>1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu" style="color:white">online@vcu.edu</a></p>
 						<p>Division of the Vice Provost for Learning Innovation and Student Success <br/>
 						Office of the Provost | Virginia Commonwealth University</p>
 

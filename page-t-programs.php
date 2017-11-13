@@ -46,26 +46,26 @@
 			<div class="filters">
 				<select aria-label="Select box to filter list by department" class="filter-department" ng-model="filterDepartment"
 						ng-options="
-						data.department for data in data |
+						data.acf.department for data in data |
 						orderBy: 'department' |
 						filter:filterDept.dept |
-						unique:'department'">
+						unique:'acf.department'">
 				    <option value="">All Colleges</option>
 				</select>
 
 				<select aria-label="Select box to filter list by degree type" class="filter-degree" ng-model="filterDegree"
 						ng-options="
-						data.degree for data in data |
+						data.acf.degree for data in data |
 						orderBy: 'degree' |
 						filter:filterCollege.college |
-						unique:'degree'">
+						unique:'acf.degree'">
 				    <option value=""> All Degrees</option>
 				</select>
 
 				<select aria-label="Select box to filter list by delivery mode" class="filter-mode" ng-model="filterMode"
 						ng-options="
-						data.mode for data in data |
-						unique:'mode' ">
+						data.acf.mode for data in data |
+						unique:'acf.mode' ">
 				    <option value=""> All Modes</option>
 				</select>
 
@@ -103,25 +103,25 @@
 			ng-repeat="
 					data in data |
 					filter:search |
-					filter:filterDegree.degree |
-					filter:filterDepartment.department |
-					filter:filterMode.mode |
+					filter:filterDegree.acf.degree |
+					filter:filterDepartment.acf.department |
+					filter:filterMode.acf.mode |
 					orderBy: 'title'
 				"
 			>
 			<a class="program-link cf" href="{{data.link}}" ng-cloak>
 
 				<div class="course">
-					<span class="course-title {{filter}}" ng-cloak >{{data.title}}</span><br/>
-					<span class="course-subject {{filter}}" ng-cloak >{{data.meta.subject}}</span><br/>
+					<span class="course-title {{filter}}" ng-cloak >{{data.title.rendered}}</span><br/>
+					<span class="course-subject {{filter}}" ng-cloak >{{data.acf.subject}}</span><br/>
 				</div>
 
 				<div class="details">
-					<span class="course-college {{filter}}" ng-cloak >{{data.meta.department}}</span><br/>
+					<span class="course-college {{filter}}" ng-cloak >{{data.acf.department}}</span><br/>
 				</div>
 
 				<div class="mode">
-					<span class="course-mode {{filter}}" ng-cloak >{{data.mode}}</span>
+					<span class="course-mode {{filter}}" ng-cloak >{{data.acf.mode}}</span>
 					<span ng-if="data.mode_desc" class='popup right' ng-cloak >{{data.mode_desc}}</span>
 				</div>
 

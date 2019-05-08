@@ -149,7 +149,7 @@ and more scalable.
         /* highlight current page */
         li.current-menu-item, li.current_page_item, li.current_page_ancestor {
             > a {
-                background-color: $true-black;
+                background-color: $black;
                 color: $white;
             }
         }
@@ -201,7 +201,7 @@ and more scalable.
             font-weight: bold;
             border-left: 0em solid transparent;
             &:hover, &:focus {
-                color: $true-black;
+                color: $yellow;
                 background: $white;
                 border-left: .2em solid $yellow;
                 padding-left: .2em;

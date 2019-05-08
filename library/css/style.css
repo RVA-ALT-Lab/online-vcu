@@ -1810,3 +1810,7 @@ though, go for it.
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */
+
+.hidden {
+  display: none;
+}

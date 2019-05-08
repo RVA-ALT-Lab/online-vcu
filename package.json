@@ -19,8 +19,6 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-devcode": "latest",
-    "grunt-sass": "latest",
-    "sass-loader": "^7.1.0",
-    "susy": "^3.0.5"
+    "grunt-sass": "latest"
   }
 }

@@ -37,7 +37,6 @@ $green:             #7dd667;
 
 $bones-pink:        #f01d4f;
 $blue:              #2980b9;
-$link-blue:         #0000ff;
 
 $f-gray:            #474D4D;
 $f-red:             #e96763;
@@ -45,8 +44,8 @@ $f-blue:            #d6e1df;
 
 $yellow:            #FEBE10;
 
-$link-color:        $link-blue;
-$link-hover:        #0000c1;
+$link-color:        $yellow;
+$link-hover:        $black;
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;

@@ -38,7 +38,7 @@
                       }
 
                       if( $degree || $subject ){
-                        $output .= "<span class='line'><strong>{$degree} {$subject}</strong></span>";
+                        $output .= "<span class='line'><strong>{$degree} <br> {$subject}</strong></span>";
                       }
 
                     if ( $department || $degree || $subject ){
@@ -69,8 +69,8 @@
                       $output .= "<p class='mode'><strong>{$mode}</strong><span class='popup'>This is your amazing description that will answer all your questions.</span></p>";
                     }
 
-                    $output .= "<ul>";
-                    $output .= "<li><a href='http://www.enrollment.vcu.edu/accounting/tuition-and-fees/tuition-and-fees-calculator/'>Tuition Calculator</a></li>";
+                    $output .= "<ul id='details'>";
+                    $output .= "<li id='calculator'><a href='https://accounting.vcu.edu/tuition/calculator/'>Tuition Calculator</a></li>";
 
                       if ($program_website){
                         $output .= "<li><a href='{$program_website}'>Website</a></li>";
@@ -79,7 +79,7 @@
                         $output .= "<li><a href='{$curriculum}'>Curriculum</a></li>";
                       }
                       if ($request_info){
-                        $output .= "<li><a href='{request_info}'>Request Info</a></li>";
+                        $output .= "<li><a href='{$request_info}'>Request Info</a></li>";
                       }
 
                     if( have_rows('links') ): while ( have_rows('links') ) : the_row();

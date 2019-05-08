@@ -115,5 +115,9 @@ jQuery(document).ready(function($) {
 		$('.closed').toggleClass('active');
 		$('.open').toggleClass('active');
 	});
+	
 
 }); /* end of as page load scripts */
+
+
+

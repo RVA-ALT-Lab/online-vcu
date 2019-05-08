@@ -1,9 +1,8 @@
 *Installation (only required if not using vvvcuarts vagrant)*
-Run this command to install all of the npm packages associated with the project 
 ```bash
 npm install
 ```
-Run this command to install all of the npm packages associated with the project
+
 ```bash
 bower install
 ```

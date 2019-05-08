@@ -116,4 +116,14 @@ jQuery(document).ready(function($) {
 		$('.open').toggleClass('active');
 	});
 
+/*
+*TEMP STUFF TO MAKE NOODLE HAPPY
+*/
+if(document.getElementsByClassName('postid-458')[0]){
+		let calc = document.getElementById('calculator');
+		console.log(calc)
+		calc.classList.add('hidden')
+	}
+
+
 }); /* end of as page load scripts */

@@ -77,9 +77,31 @@
 	#skip-to-content:focus {
 		top: 0;
 	}
+	.alert-message {
+	    line-height: 100px;
+	    font-family: Roboto,sans-serif;
+	    font-weight: 600;
+	    font-size: 1.3rem;
+	    line-height: 1.5;
+	    text-align: center;
+	    padding: 25px 10px 25px 10px;
+	}
+	.alert-message a {
+    	color: #fff;
+    	text-decoration: underline;
+	}
+	.alert-message a:hover {
+		color: #fff;
+	}
+	.alert-banner {
+	    color: #fff;
+	    background-color: #d43900;
+	}
 </style>
 <a id="skip-to-content" href="#main">Skip to Content</a>
-
+<div class="alert-banner">
+	<div class="alert-message col-md-12">ALERT: VCU faculty can find <a href="https://altlab.vcu.edu/facilitated-courses/">professional development opportunities for online courses here.</a></div>
+</div>
 		<div class="container">
 
 			<header class="header clearfix" role="banner" aria-label="banner" itemscope itemtype="http://schema.org/WPHeader">

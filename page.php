@@ -13,48 +13,48 @@
 								<section class="entry-content" itemprop="articleBody">
 
 
-<?php
+										<?php
 
-the_content();
-
-
+										the_content();
 
 
-$content = get_field('content');
-
-if ( $content ){
-
-	foreach( $content as $content ){
 
 
-		foreach( $content as $row ){
-			$columns = count( $row );
-			$large = "";
-			if ( $columns == 1 ){
-				foreach($row as $column){
+										$content = get_field('content');
 
-					if( $column['large'] ){
-						$large = "large";
-					}
-				}
-			}
+										if ( $content ){
 
-			echo "<div class='row row{$columns} {$large}'>";
+											foreach( $content as $content ){
 
-				foreach($row as $column){
-					echo "<div class='column'>";
-						echo $column['columns'];
-					echo "</div>";
-				}
 
-			echo "</div>";
-		}
+												foreach( $content as $row ){
+													$columns = count( $row );
+													$large = "";
+													if ( $columns == 1 ){
+														foreach($row as $column){
 
-	}
+															if( $column['large'] ){
+																$large = "large";
+															}
+														}
+													}
 
-}
+													echo "<div class='row row{$columns} {$large}'>";
 
-?>
+														foreach($row as $column){
+															echo "<div class='column'>";
+																echo $column['columns'];
+															echo "</div>";
+														}
+
+													echo "</div>";
+												}
+
+											}
+
+										}
+
+										?>
 
 
 

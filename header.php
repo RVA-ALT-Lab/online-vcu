@@ -100,7 +100,7 @@
 </style>
 <a id="skip-to-content" href="#main">Skip to Content</a>
 <div class="alert-banner">
-	<div class="alert-message col-md-12">ALERT: VCU faculty can find <a href="https://altlab.vcu.edu/facilitated-courses/">professional development opportunities for online courses here.</a></div>
+	<div class="alert-message col-md-12">ALERT: VCU faculty can find assistance in <a href="https://altlab.vcu.edu/#pd-2020">professional and curriculum development here.</a></div>
 </div>
 		<div class="container">
 

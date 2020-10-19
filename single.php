@@ -22,24 +22,26 @@
                     $subject = get_field('subject');
                     $commitment = get_field('commitment');
                     $min_credits = get_field('minimum_credit_hours');
+                    $credits_additional = get_field('credit_hours_additional');
                     $min_gpa = get_field('minimum_gpa_for_admission');
                     $mode = get_field('mode');
 
                     $links = get_field('links');
                     $program_website = get_field('links_program_website');
                     $curriculum = get_field('links_curriculum');
-                    $request_info= get_field('links_request_information');
+                    $request_info = get_field('links_request_information');
+                    $clean_info = str_replace("mailto:", "", $request_info);
                     
                     if ( $department || $degree || $subject ){
                       $output .= "<p>";
                     }
-                      if( $department ){
-                        $output .= "<span class='line'><strong>{$department}</strong></span>";
-                      }
+                    if( $department ){
+                      $output .= "<span class='line'><strong>{$department}</strong></span>";
+                    }
 
-                      if( $degree || $subject ){
-                        $output .= "<span class='line'><strong>{$degree} <br> {$subject}</strong></span>";
-                      }
+                    if( $degree || $subject ){
+                      $output .= "<span class='line'><strong>{$degree} <br> {$subject}</strong></span>";
+                    }
 
                     if ( $department || $degree || $subject ){
                       $output .= "</p>";
@@ -49,17 +51,18 @@
                       $output .= "<p>";
                     }
 
-                      if ($commitment){
-                        $output .= "<span class='line'><strong>{$commitment}</strong></span>";
-                      }
+                    if ($commitment){
+                      $output .= "<span class='line'><strong>{$commitment}</strong></span>";
+                    }
 
-                      if ($min_credits){
-                        $output .="<span class='line'><strong>{$min_credits}</strong> min credit hours </span>";
-                      }
+                    if ($min_credits || $credits_additional){
+                      $output .="<span class='line'><strong>{$min_credits}</strong> min credit hours </span>";
+                      $output .="<span class='line'>{$credits_additional}</span>";
+                    }
 
-                      if ($min_gpa){
-                        $output .= "<span class='line'><strong>{$min_gpa}</strong> min GPA for admission<span>";
-                      }
+                    if ($min_gpa){
+                      $output .= "<span class='line'><strong>{$min_gpa}</strong> min GPA for admission<span>";
+                    }
 
                     if ($commitment || $min_credits || $min_gpa ) {
                       $output .= "</p>";
@@ -79,7 +82,7 @@
                         $output .= "<li><a href='{$curriculum}'>Curriculum</a></li>";
                       }
                       if ($request_info){
-                        $output .= "<li><a href='{$request_info}'>Request Info</a></li>";
+                        $output .= "<li><a href='{$request_info}'>Request Info at {$clean_info}</a></li>";
                       }
 
                     if( have_rows('links') ): while ( have_rows('links') ) : the_row();

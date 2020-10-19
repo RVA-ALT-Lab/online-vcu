@@ -26,7 +26,7 @@
 
 
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-	          			<p class="last-modified">Last modified: <?php the_modified_time('F j, Y'); ?></p>
+	          			<p class="last-modified">Last modified: May 8, 2019</p>
           			</div>
 
           			<div class="full-logo">

@@ -928,12 +928,12 @@ HEADER STYLES
 #logo {
   float: left;
   margin: 0 2em 0 0;
-  width: 190px;
+  width: 250px;
   position: relative;
-  top: 20px; }
+  top: 30px; }
   #logo img {
     transition: all .3s ease;
-    max-width: 190px; }
+    max-width: 250px; }
   #logo .monotone {
     position: absolute; }
   #logo .color {

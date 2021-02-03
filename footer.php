@@ -21,16 +21,18 @@
 				<!-- 	</nav> -->
 
 					<div class="info">
-						<p>1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284  | <a href="mailto:online@vcu.edu" style="color:white">online@vcu.edu</a></p>
-						Office of the Provost | Virginia Commonwealth University</p>
+						<p>VCU Online</p>
+						<p>1000 Floyd Ave, Suite 4102 | Richmond, Virginia 23284</p>
+						<a href="mailto:online@vcu.edu" style="color:white">online@vcu.edu</a> | <a href="tel:8048286786" style="color:white">Tel: 804-828-6786</a></p>
+						<a href="https://www.vcu.edu/" title="VCU homepage" style="color:white">Virginia Commonwealth University</a></p>
 
 
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-	          			<p class="last-modified">Last modified: May 8, 2019</p>
+	          			<p class="last-modified">Last modified: February 3, 2021</p>
           			</div>
 
           			<div class="full-logo">
-          				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-full.svg" alt="Online @ VCU brand logo in color" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-full.jpg'"></a>
+          				<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline_stk_SS_color.png" alt="VCU Online brand logo in color" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline_stk_SS_color.png'"></a>
           			</div>
 				</div>
 

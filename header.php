@@ -64,18 +64,29 @@
 
 <style>
 	#skip-to-content {
-		position: fixed;
-		z-index: 1000;
-		top: -50px;
+		position: absolute;
 		left: 0;
-		width: 100%;
-		height:35px;
-		text-align:center;
-		font-size: 1.5em;
-		background-color:white;
-	}
-	#skip-to-content:focus {
 		top: 0;
+		width: 100%;
+		margin-left: 0;
+		list-style: outside none;
+	}
+	#skip-to-content a {
+		position: absolute;
+		left: 15px;
+		top: -100px;
+		z-index: 10000;
+		height: auto;
+		margin: 0 auto;
+		padding: 10px 15px;
+		background-color: transparent;
+		color: #ffba00;
+		outline: none;
+		transition: top 0.2s, background-color 0.2s;
+	}
+	#skip-to-content a:focus, #skip-to-content a:hover {
+		top: 0;
+		background-color: #333;
 	}
 	.alert-message {
 	    line-height: 100px;
@@ -98,7 +109,10 @@
 	    background-color: #d43900;
 	}
 </style>
-<a id="skip-to-content" href="#main">Skip to Content</a>
+<div id="skip-to-content">
+    <a href="#main" tabindex="1">Skip to Content</a>
+</div>
+<!-- <a id="skip-to-content" href="#main">Skip to Content</a> -->
 <div class="alert-banner">
 	<div class="alert-message col-md-12">ALERT: VCU faculty can find assistance in <a href="https://altlab.vcu.edu/#pd-2020">professional and curriculum development here.</a></div>
 </div>
@@ -111,8 +125,8 @@
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 						<p id="logo" class="h1" role="heading" aria-level="1" itemscope itemtype="http://schema.org/Organization">
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-        <img class="monotone" alt="Online @ VCU brand logo in monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz.jpg'">
-        <img class="color" alt="Online @ VCU brand logo in color" src="<?php echo get_template_directory_uri(); ?>/library/images/svg/online-vcu-horz-hover.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/svg/fallbacks/online-vcu-horz-hover.jpg'">
+        <img class="monotone" alt="VCU Online brand logo in monotone" src="<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline-K_SS.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline-K_SS.png'">
+        <img class="color" alt="VCU Online brand logo in color" src="<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline-color_SS_fixed.png" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/library/images/VCUOnline-color_SS_fixed.png'">
         					</a>
         				</p>
 

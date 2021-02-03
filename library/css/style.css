@@ -935,14 +935,14 @@ HEADER STYLES
     transition: all .3s ease;
     max-width: 250px; }
   #logo .monotone {
-    position: absolute; }
-  #logo .color {
     position: absolute;
     opacity: 0; }
+  #logo .color {
+    position: absolute; }
   #logo:hover .monotone {
-    opacity: 0; }
-  #logo:hover .color {
     opacity: 1; }
+  #logo:hover .color {
+    opacity: 0; }
   #logo a {
     color: #323944;
     font-size: 24px;
@@ -1063,7 +1063,7 @@ and more scalable.
         .nav li a {
           display: block;
           text-decoration: none;
-          padding: 56px .75em 21px 0.75em;
+          padding: 51px .75em 26px 0.75em;
           height: 100%;
           color: black;
           transition: all 0.3s ease; }

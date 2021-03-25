@@ -127,10 +127,10 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.5', false );
+		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.6', false );
 
 		// register main stylesheet
-		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'Version 1.02', 'all' );
+		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'Version 1.03', 'all' );
         wp_register_style( 'bones-stylesheet-min', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 
         wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic', array(), '', 'all' );
